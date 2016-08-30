@@ -1,13 +1,14 @@
 .container {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 2px;
+    border-bottom: rgba(65, 86, 91, 0.26) solid 1px;
 }
 
 .caption {
     font-weight: bold;
-    background-color: rgba(182, 241, 255, 0.26);
+    background-color: rgba(190, 190, 190, 0.26);
     padding: 3px;
 }
 
 .value {
+    padding: 1px;
 }
