@@ -1,9 +1,12 @@
 .container {
-
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .caption {
     font-weight: bold;
+    background-color: rgba(182, 241, 255, 0.26);
+    padding: 3px;
 }
 
 .value {
