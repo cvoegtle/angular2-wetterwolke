@@ -18,6 +18,9 @@
 
   "files": [
     "main.ts",
-    "typings.d.ts"
+    "typings.d.ts",
+    "app/app.component.ts",
+    "app/weather-data-list/weather-data-list.component.ts",
+    "app/weather-data-view/weather-data-view.component.ts"
   ]
 }

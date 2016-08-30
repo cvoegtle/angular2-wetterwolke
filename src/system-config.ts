@@ -36,6 +36,9 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/weather-data',
+  'app/weather-data-view',
+  'app/weather-data-list',
   /** @cli-barrel */
 ];
 
