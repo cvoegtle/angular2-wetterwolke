@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherData } from "../weather-data";
 import { WeatherDataService } from "../weather-data.service";
+import '../rxjs-operators';
 
 @Component({
   moduleId: module.id,
@@ -10,6 +11,7 @@ import { WeatherDataService } from "../weather-data.service";
 })
 export class WeatherDataListComponent implements OnInit {
   private weatherDataList: WeatherData[] = [];
+  private errorMessage: string;
 
   constructor(private weatherService: WeatherDataService) { }
 
@@ -17,13 +19,10 @@ export class WeatherDataListComponent implements OnInit {
     this.fetchWeatherData();
   }
 
-  fetchWeatherData() {
-    this.weatherService.fetchWeatherData().then(weatherData => this.setWeatherData(weatherData));
+  fetchWeatherData(): void {
+    this.weatherService.fetchWeatherData().subscribe(weatherData => this.weatherDataList = weatherData,
+    error => this.errorMessage = <any>error);
   }
 
-  setWeatherData(weatherData: WeatherData[]) {
-    this.weatherDataList = weatherData;
-    console.error("WeatherData=" + weatherData);
-  }
 
 }
