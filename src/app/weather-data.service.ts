@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class WeatherDataService {
-  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&locations=tegelweg8,bali,forstweg17,ochsengasse,leoxity,elb,herzo,shenzhen,instant&secret=';
+  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&locations=tegelweg8,bali,forstweg17,ochsengasse,leoxity,elb,herzo,shenzhen&secret=';
 
   constructor(private http: Http) {
   }
