@@ -1,3 +1,14 @@
-<div class="caption"><span class="title">{{title}}</span>{{updateTime | date:'HH:mm'}}</div>
+<md-toolbar color="primary">
+  <button class="app-icon-button">
+    <i class="material-icons app-toolbar-menu">menu</i>
+  </button>
+
+  {{title}}
+
+  <span class="app-toolbar-filler"></span>
+
+  {{updateTime | date:'HH:mm'}}
+
+</md-toolbar>
 <app-weather-data-list [weatherDataList]="weatherDataList"></app-weather-data-list>
 <div>{{errorMessage}}</div>
