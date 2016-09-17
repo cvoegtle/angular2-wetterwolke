@@ -12,7 +12,7 @@ export class WeatherDataService {
 
   fetchWeatherData(): Observable<WeatherData[]> {
     return this.http.get(this.weatherUrl).map(this.extractData)
-        .catch(this.handleError)
+        .catch(this.handleError);
   }
 
   private extractData(response: Response) {

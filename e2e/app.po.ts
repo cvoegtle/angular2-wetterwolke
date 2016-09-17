@@ -1,4 +1,6 @@
-export class Angular2WetterwolkePage {
+import { browser, element, by } from 'protractor/globals';
+
+export class Angular2CliTmpPage {
   navigateTo() {
     return browser.get('/');
   }
