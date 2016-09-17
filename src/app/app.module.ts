@@ -5,6 +5,7 @@ import { HttpModule } from "@angular/http";
 
 import { MdCardModule } from '@angular2-material/card';
 import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdSidenavModule } from '@angular2-material/sidenav';
 
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./weather-data.service";
@@ -17,7 +18,8 @@ import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.
     FormsModule,
     HttpModule,
     MdCardModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdSidenavModule
   ],
   declarations: [
     AppComponent,

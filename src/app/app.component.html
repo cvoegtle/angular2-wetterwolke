@@ -1,14 +1,21 @@
-<md-toolbar color="primary">
-  <button class="app-icon-button">
-    <i class="material-icons app-toolbar-menu">menu</i>
-  </button>
+<md-sidenav-layout>
 
-  {{title}}
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    Sidenav
+  </md-sidenav>
 
-  <span class="app-toolbar-filler"></span>
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
 
-  {{updateTime | date:'HH:mm'}}
+    {{title}}
 
-</md-toolbar>
-<app-weather-data-list [weatherDataList]="weatherDataList"></app-weather-data-list>
-<div>{{errorMessage}}</div>
+    <span class="app-toolbar-filler"></span>
+
+    {{updateTime | date:'HH:mm'}}
+
+  </md-toolbar>
+  <app-weather-data-list [weatherDataList]="weatherDataList"></app-weather-data-list>
+  <div>{{errorMessage}}</div>
+</md-sidenav-layout>
