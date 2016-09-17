@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
+import { MdCardModule } from '@angular2-material/card';
+
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./weather-data.service";
 import { WeatherDataListComponent } from "./weather-data-list/weather-data-list.component";
@@ -12,7 +14,8 @@ import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MdCardModule
   ],
   declarations: [
     AppComponent,
