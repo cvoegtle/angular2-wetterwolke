@@ -15,6 +15,7 @@ import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.
 import { DateFormat } from "./pipe.date-format";
 import { WeatherComponent } from './weather/weather.component';
 import { SettingsComponent } from './settings/settings.component';
+import { routing, appRoutingProviders } from "./app.routing";
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { SettingsComponent } from './settings/settings.component';
     MdCardModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdListModule
+    MdListModule,
+    routing
   ],
   declarations: [
     AppComponent,
@@ -36,6 +38,7 @@ import { SettingsComponent } from './settings/settings.component';
   ],
   providers: [
     WeatherDataService,
+    appRoutingProviders
   ],
 
   bootstrap: [AppComponent]

@@ -2,9 +2,16 @@
 
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     <md-list>
-      <md-list-item><i class="material-icons">settings_system_daydream</i> <span class="menu-item">Wetter</span> </md-list-item>
-      <md-list-item><i class="material-icons">settings</i> <span class="menu-item">Einstellungen</span> </md-list-item>
-    </md-list>  </md-sidenav>
+      <md-list-item>
+        <a routerLink="/" routerLinkActive="active" md-line>
+          <i class="material-icons">settings_system_daydream</i> <span class="menu-item">Wetter</span></a>
+      </md-list-item>
+      <md-list-item>
+        <a routerLink="/settings" routerLinkActive="active">
+          <i class="material-icons">settings</i> <span class="menu-item">Einstellungen</span></a>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
 
   <md-toolbar color="primary">
     <button class="app-icon-button" (click)="sidenav.toggle()">
@@ -18,5 +25,5 @@
     {{updateTime | dateHHmm}}
 
   </md-toolbar>
-  <app-weather (updateEvent)="weatherUpdated($event)"></app-weather>
+  <router-outlet></router-outlet>
 </md-sidenav-layout>

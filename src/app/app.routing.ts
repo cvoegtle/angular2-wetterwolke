@@ -1,10 +1,16 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { WeatherComponent } from "./weather/weather.component";
+import { SettingsComponent } from "./settings/settings.component";
 
 const appRoutes: Routes = [
-  { path: '', component: WeatherComponent },
-  { path: 'settings', component: SettingsComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    redirectTo: '/weather',
+    pathMatch: 'full'
+  },
+  { path: 'weather', component: WeatherComponent },
+  { path: 'settings', component: SettingsComponent }
 ];
 
 export const appRoutingProviders: any[] = [];
