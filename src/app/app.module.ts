@@ -11,6 +11,7 @@ import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./weather-data.service";
 import { WeatherDataListComponent } from "./weather-data-list/weather-data-list.component";
 import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.component";
+import { DateFormat } from "./pipe.date-format";
 
 @NgModule({
   imports: [
@@ -24,11 +25,13 @@ import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.
   declarations: [
     AppComponent,
     WeatherDataListComponent,
-    WeatherDataViewComponent
+    WeatherDataViewComponent,
+    DateFormat
   ],
   providers: [
     WeatherDataService,
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {
