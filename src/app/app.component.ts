@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherDataService } from "./weather-data.service";
-import { WeatherData } from "./weather-data";
-import { Observable } from "rxjs/Observable";
 import './rxjs-operators';
 
 @Component({
@@ -11,21 +8,13 @@ import './rxjs-operators';
 })
 export class AppComponent implements OnInit {
   private title = 'Wetter Wolke';
-  private errorMessage: string;
-  private weatherDataList: WeatherData[];
   private updateTime: Date;
 
-  constructor(private weatherService: WeatherDataService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.fetchWeatherData();
-    Observable.interval(180000).subscribe(() => this.fetchWeatherData());
+  ngOnInit() {}
+
+  weatherUpdated(updateTs: Date) {
+    this.updateTime = updateTs;
   }
-
-  fetchWeatherData(): void {
-    this.weatherService.fetchWeatherData().subscribe(weatherData => this.weatherDataList = weatherData,
-        error => this.errorMessage = <any>error, () => this.updateTime = new Date());
-  }
-
-
 }

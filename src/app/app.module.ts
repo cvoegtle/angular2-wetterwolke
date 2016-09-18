@@ -13,6 +13,8 @@ import { WeatherDataService } from "./weather-data.service";
 import { WeatherDataListComponent } from "./weather-data-list/weather-data-list.component";
 import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.component";
 import { DateFormat } from "./pipe.date-format";
+import { WeatherComponent } from './weather/weather.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   imports: [
@@ -28,7 +30,9 @@ import { DateFormat } from "./pipe.date-format";
     AppComponent,
     WeatherDataListComponent,
     WeatherDataViewComponent,
-    DateFormat
+    DateFormat,
+    WeatherComponent,
+    SettingsComponent,
   ],
   providers: [
     WeatherDataService,

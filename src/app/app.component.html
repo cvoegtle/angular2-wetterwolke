@@ -18,6 +18,5 @@
     {{updateTime | dateHHmm}}
 
   </md-toolbar>
-  <app-weather-data-list [weatherDataList]="weatherDataList"></app-weather-data-list>
-  <div>{{errorMessage}}</div>
+  <app-weather (updateEvent)="weatherUpdated($event)"></app-weather>
 </md-sidenav-layout>
