@@ -6,6 +6,7 @@ import { HttpModule } from "@angular/http";
 import { MdCardModule } from '@angular2-material/card';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdSidenavModule } from '@angular2-material/sidenav';
+import { MdListModule } from '@angular2-material/list/list';
 
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./weather-data.service";
@@ -20,7 +21,8 @@ import { DateFormat } from "./pipe.date-format";
     HttpModule,
     MdCardModule,
     MdToolbarModule,
-    MdSidenavModule
+    MdSidenavModule,
+    MdListModule
   ],
   declarations: [
     AppComponent,
