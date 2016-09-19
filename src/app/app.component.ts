@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import './rxjs-operators';
+import { WeatherDataService } from "./weather-data.service";
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,13 @@ import './rxjs-operators';
   styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
-  private title = 'Wetter Wolke';
+  private title: string = 'Wetter Wolke';
   private updateTime: Date;
 
-  constructor() {}
+  constructor(private weatherService: WeatherDataService) {
+    this.weatherService.weatherChanged.subscribe(updateTs => this.updateTime = updateTs);
+  }
 
   ngOnInit() {}
 
-  weatherUpdated(updateTs: Date) {
-    this.updateTime = updateTs;
-  }
 }
