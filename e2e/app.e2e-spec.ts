@@ -1,10 +1,10 @@
-import { Angular2CliTmpPage } from './app.po';
+import { MigrateWetterwolkePage } from './app.po';
 
-describe('angular2-cli-tmp App', function() {
-  let page: Angular2CliTmpPage;
+describe('migrate-wetterwolke App', function() {
+  let page: MigrateWetterwolkePage;
 
   beforeEach(() => {
-    page = new Angular2CliTmpPage();
+    page = new MigrateWetterwolkePage();
   });
 
   it('should display message saying app works', () => {
