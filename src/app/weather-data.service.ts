@@ -2,10 +2,11 @@ import { Injectable, EventEmitter } from "@angular/core";
 import { WeatherData } from "./weather-data";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
+import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Injectable()
 export class WeatherDataService {
-  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&locations=tegelweg8,bali,forstweg17,ochsengasse,leoxity,elb,herzo,shenzhen&secret=';
+  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&secret=&locations=';
 
   public weatherChanged = new EventEmitter<Date>();
 
@@ -14,8 +15,17 @@ export class WeatherDataService {
 
   fetchWeatherData(): Observable<WeatherData[]> {
     this.weatherChanged.emit(new Date());
-    return this.http.get(this.weatherUrl).map(this.extractData)
+    return this.http.get(this.getActiveUrl()).map(this.extractData)
         .catch(this.handleError);
+  }
+
+  private getActiveUrl():string {
+    let activeLocations:string = Cookie.get('activeLocations');
+    if (activeLocations == null || activeLocations == "") {
+      activeLocations = "tegelweg8,ochsengasse,herzo,shenzhen";
+    }
+    return this.weatherUrl + activeLocations;
+
   }
 
   private extractData(response: Response) {

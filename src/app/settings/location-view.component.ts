@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Location } from "./location";
-import { Input } from "@angular/core/src/metadata/directives";
+import { Input, Output } from "@angular/core/src/metadata/directives";
 
 @Component({
   selector: 'app-location-view',
@@ -9,10 +9,17 @@ import { Input } from "@angular/core/src/metadata/directives";
 })
 export class LocationViewComponent implements OnInit {
   @Input() location:Location;
+  @Output() changed = new EventEmitter<string>();
+
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  onClick(newValue:boolean) {
+    this.changed.emit(this.location.location);
+  }
+
 
 }

@@ -2,7 +2,7 @@
   <md-card>
     <h2>Stationen einblenden</h2>
     <md-list>
-      <app-location-view *ngFor="let location of locations" [location]="location"></app-location-view>
+      <app-location-view *ngFor="let location of locations" [location]="location" (changed)="onLocationChanged($event)"></app-location-view>
     </md-list>
   </md-card>
 </div>

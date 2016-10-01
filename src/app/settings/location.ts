@@ -1,5 +1,5 @@
 export interface Location {
- location:string;
+  location:string;
   city:string;
   cityShortcut:string;
   weatherForecast:string;
