@@ -3,10 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
-import { MdCardModule } from '@angular2-material/card';
-import { MdToolbarModule } from '@angular2-material/toolbar';
-import { MdSidenavModule } from '@angular2-material/sidenav';
-import { MdListModule } from '@angular2-material/list/list';
+import {MaterialModule} from '@angular/material';
 
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./weather-data.service";
@@ -16,16 +13,15 @@ import { DateFormat } from "./pipe.date-format";
 import { WeatherComponent } from './weather/weather.component';
 import { SettingsComponent } from './settings/settings.component';
 import { routing, appRoutingProviders } from "./app.routing";
+import { LocationViewComponent } from './settings/location-view.component';
+import { LocationService } from "./settings/location.service";
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdSidenavModule,
-    MdListModule,
+    MaterialModule.forRoot(),
     routing
   ],
   declarations: [
@@ -35,9 +31,11 @@ import { routing, appRoutingProviders } from "./app.routing";
     DateFormat,
     WeatherComponent,
     SettingsComponent,
+    LocationViewComponent,
   ],
   providers: [
     WeatherDataService,
+    LocationService,
     appRoutingProviders
   ],
 

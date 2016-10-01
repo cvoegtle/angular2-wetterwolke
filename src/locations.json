@@ -1,0 +1,14 @@
+[{
+  "location":"paderborn",
+  "city": "Paderborn",
+  "cityShortcut": "PB",
+  "weatherForecast": "http://wetterstationen.meteomedia.de/?station=104300&wahl=vorhersage",
+  "windRelevant": false
+},
+  {
+  "location":"shenzhen",
+  "city": "Shenzen",
+  "cityShortcut": "SZ",
+  "weatherForecast": "http://www.wetter.com/china/shenzhen/CN0GD0012.html",
+  "windRelevant": false
+}]
