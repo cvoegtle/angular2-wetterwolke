@@ -6,9 +6,51 @@
   "windRelevant": false
 },
   {
-  "location":"shenzhen",
-  "city": "Shenzen",
-  "cityShortcut": "SZ",
-  "weatherForecast": "http://www.wetter.com/china/shenzhen/CN0GD0012.html",
-  "windRelevant": false
-}]
+  "location":"bali",
+  "city": "Bad Lippspringe",
+  "cityShortcut": "BaLi",
+  "weatherForecast": "http://wetterstationen.meteomedia.de/?station=104300&wahl=vorhersage",
+  "windRelevant": true
+},
+  {
+    "location":"leoxity",
+    "city": "Leopoldshöhe",
+    "cityShortcut": "Leo",
+    "weatherForecast": "http://wetterstationen.meteomedia.de/?station=103250&wahl=vorhersage",
+    "windRelevant": true
+  },
+  {
+    "location":"forstweg17",
+    "city": "Bonn",
+    "cityShortcut": "BN",
+    "weatherForecast": "http://wetterstationen.meteomedia.de/?station=105170&wahl=vorhersage ",
+    "windRelevant": true
+  },
+  {
+    "location":"elb",
+    "city": "Magdeburg",
+    "cityShortcut": "MD",
+    "weatherForecast": "http://wetterstationen.meteomedia.de/?station=103610&wahl=vorhersage",
+    "windRelevant": true
+  },
+  {
+    "location":"herzo",
+    "city": "Herzogenaurach",
+    "cityShortcut": "HZA",
+    "weatherForecast": "http://wetterstationen.meteomedia.de/?station=194919&wahl=vorhersage",
+    "windRelevant": true
+  },
+  {
+    "location":"ochsengasse",
+    "city": "Freiburg",
+    "cityShortcut": "FR",
+    "weatherForecast": "http://wetterstationen.meteomedia.de/?station=108030&wahl=vorhersage",
+    "windRelevant": true
+  },
+  {
+    "location":"shenzhen",
+    "city": "Shenzen",
+    "cityShortcut": "SZ",
+    "weatherForecast": "http://www.wetter.com/china/shenzhen/CN0GD0012.html",
+    "windRelevant": false
+  }]
