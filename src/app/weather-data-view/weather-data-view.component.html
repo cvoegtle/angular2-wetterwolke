@@ -1,8 +1,8 @@
 <div class="weather-data-view">
 <md-card >
   <div class="title">{{weatherData.location}} - {{weatherData.localtime}}</div>
-  <div class="value">Temperatur: {{weatherData.temperature}}°C</div>
-  <div class="value">Luftfeuchtigkeit: {{weatherData.humidity}}%</div>
+  <div class="value">Temperatur: {{weatherData.temperature}} °C</div>
+  <div class="value">Luftfeuchtigkeit: {{weatherData.humidity}} %</div>
   <div class="value" *ngIf="weatherData.rain_today">
     Regen: {{weatherData.rain_today | number:'1.1-1'}} l
     <span *ngIf="weatherData.rain"> / {{weatherData.rain | number:'1.1-1'}} l</span>
@@ -10,5 +10,6 @@
   <div class="value" *ngIf="weatherData.wind">
     Wind: {{weatherData.rain_today | number:'1.1-1'}} km/h
   </div>
+  <app-weather-stats></app-weather-stats>
 </md-card>
 </div>

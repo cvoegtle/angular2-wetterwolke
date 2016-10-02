@@ -15,6 +15,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { routing, appRoutingProviders } from "./app.routing";
 import { LocationViewComponent } from './settings/location-view.component';
 import { LocationService } from "./settings/location.service";
+import { WeatherStatsComponent } from './weather-stats/weather-stats.component';
+import { WeatherStatLineComponent } from './weather-stats/weather-stat-line.component';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { LocationService } from "./settings/location.service";
     WeatherComponent,
     SettingsComponent,
     LocationViewComponent,
+    WeatherStatsComponent,
+    WeatherStatLineComponent,
   ],
   providers: [
     WeatherDataService,
