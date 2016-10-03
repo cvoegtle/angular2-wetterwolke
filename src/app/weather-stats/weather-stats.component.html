@@ -6,4 +6,5 @@
     <div class="column caption">Tmax</div>
     <div class="column_wide caption">{{kwhCaption}}</div>
   </div>
+  <app-weather-stat-line *ngFor="let stat of stats" [stat]="stat"></app-weather-stat-line>
 </md-card>

@@ -1,12 +1,12 @@
 .title {
     font-weight: bold;
     background-color: rgba(190, 190, 190, 0.26);
-    padding: 3px;
+    padding: 3px 8px 3px 8px;
     margin-bottom: 6px;
 }
 
 .value {
-    padding: 1px;
+    padding: 2px 8px 2px 8px;
 }
 
 .weather-data-view {

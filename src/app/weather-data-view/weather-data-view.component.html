@@ -10,6 +10,6 @@
   <div class="value" *ngIf="weatherData.wind">
     Wind: {{weatherData.rain_today | number:'1.1-1'}} km/h
   </div>
-  <app-weather-stats></app-weather-stats>
+  <app-weather-stats [locationId]="weatherData.id"></app-weather-stats>
 </md-card>
 </div>

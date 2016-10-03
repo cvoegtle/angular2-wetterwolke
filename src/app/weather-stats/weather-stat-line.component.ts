@@ -1,15 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from "@angular/core/src/metadata/directives";
+import { WeatherStatLine } from "../weather-stat-line";
 
 @Component({
   selector: 'app-weather-stat-line',
   templateUrl: './weather-stat-line.component.html',
-  styleUrls: ['./weather-stat-line.component.css']
+  styleUrls: ['./weather-stats.css']
 })
 export class WeatherStatLineComponent implements OnInit {
+  @Input() stat:WeatherStatLine;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  translate(range:string):string {
+  var translatedRange;
+  if (range === 'today') {
+    translatedRange = 'heute';
+  } else if (range === 'yesterday') {
+    translatedRange = 'gestern';
+  } else if (range === 'last7days') {
+    translatedRange = '7 Tage';
+  } else if (range === 'last30days') {
+    translatedRange = '30 Tage';
+  }
+  return translatedRange;
+}
 
 }

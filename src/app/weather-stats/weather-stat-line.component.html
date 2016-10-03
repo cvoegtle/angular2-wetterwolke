@@ -1,3 +1,7 @@
-<p>
-  weather-stat-line works!
-</p>
+<div class="row">
+    <div class="column_narrow caption">{{translate(stat.range)}}</div>
+    <div class="column_narrow">&nbsp;<span *ngIf="stat.rain">{{stat.rain | number:"1.1-1"}} l</span></div>
+    <div class="column">{{stat.minTemperature | number:"1.1-1"}} °C</div>
+    <div class="column">{{stat.maxTemperature | number:"1.1-1"}} °C</div>
+    <div class="column_wide" *ngIf="stat.kwh">{{stat.kwh | number:"1.1-1"}} kwh</div>
+</div>

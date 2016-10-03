@@ -3,14 +3,21 @@ import { WeatherData } from "./weather-data";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 import { Cookie } from 'ng2-cookies/ng2-cookies';
+import { WeatherStats } from "./weather-stats";
 
 @Injectable()
 export class WeatherDataService {
-  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&secret=&locations=';
+  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&secret=';
 
   public weatherChanged = new EventEmitter<Date>();
 
   constructor(private http: Http) {
+  }
+
+  fetchWeatherStats(location:string):Observable<WeatherStats[]> {
+    this.weatherChanged.emit(new Date());
+    return this.http.get(this.getStatsUrl(location)).map(this.extractData)
+        .catch(this.handleError);
   }
 
   fetchWeatherData(): Observable<WeatherData[]> {
@@ -24,8 +31,11 @@ export class WeatherDataService {
     if (activeLocations == null || activeLocations == "") {
       activeLocations = "tegelweg8,ochsengasse,herzo,shenzhen";
     }
-    return this.weatherUrl + activeLocations;
+    return this.weatherUrl + "&locations=" + activeLocations;
+  }
 
+  private getStatsUrl(location:string) {
+    return this.weatherUrl + "&type=stats&locations=" +location;
   }
 
   private extractData(response: Response) {
