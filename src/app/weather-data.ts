@@ -12,5 +12,6 @@ export interface WeatherData {
   rain_today?: number;
   raining?: boolean;
   wind?: number;
+  watt?: number;
   forecast?: string;
 }

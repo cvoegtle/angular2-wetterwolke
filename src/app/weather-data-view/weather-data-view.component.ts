@@ -8,10 +8,15 @@ import { WeatherData } from "../weather-data";
 })
 export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
+  private expanded:boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggle() {
+    this.expanded = !this.expanded;
   }
 
 }
