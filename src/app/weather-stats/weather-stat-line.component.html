@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="stat.range !== 'lastHour'">
     <div class="column_narrow caption">{{translate(stat.range)}}</div>
     <div class="column_narrow">&nbsp;<span *ngIf="stat.rain">{{stat.rain | number:"1.1-1"}} l</span></div>
     <div class="column">{{stat.minTemperature | number:"1.1-1"}} °C</div>

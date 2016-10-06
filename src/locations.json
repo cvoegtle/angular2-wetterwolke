@@ -3,7 +3,25 @@
   "city": "Paderborn",
   "cityShortcut": "PB",
   "weatherForecast": "http://wetterstationen.meteomedia.de/?station=104300&wahl=vorhersage",
-  "windRelevant": false
+  "windRelevant": false,
+  "diagrams": [
+    {
+      "description": "2 Tage",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=426012227&format=image"
+    },
+    {
+      "description": "30 Tage",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=183626445&format=image"
+    },
+    {
+      "description": "Jahresverlauf",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=747368525&format=image"
+    },
+    {
+      "description": "Der gleiche Tage vor einem Jahr",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=2118924146&format=image"
+    }
+  ]
 },
   {
   "location":"bali",

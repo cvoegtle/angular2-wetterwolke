@@ -1,3 +1,4 @@
+import { Diagram } from "./diagram";
 export interface Location {
   location:string;
   city:string;
@@ -5,4 +6,5 @@ export interface Location {
   weatherForecast:string;
   windRelevant:boolean;
   enabled: boolean;
+  diagrams?: Diagram[];
 }

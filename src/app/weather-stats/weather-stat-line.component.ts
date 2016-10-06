@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Input } from "@angular/core/src/metadata/directives";
 import { WeatherStatLine } from "../weather-stat-line";
 
@@ -8,25 +8,28 @@ import { WeatherStatLine } from "../weather-stat-line";
   styleUrls: ['./weather-stats.css']
 })
 export class WeatherStatLineComponent implements OnInit {
-  @Input() stat:WeatherStatLine;
+  @Input() stat: WeatherStatLine;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  translate(range:string):string {
-  var translatedRange;
-  if (range === 'today') {
-    translatedRange = 'heute';
-  } else if (range === 'yesterday') {
-    translatedRange = 'gestern';
-  } else if (range === 'last7days') {
-    translatedRange = '7 Tage';
-  } else if (range === 'last30days') {
-    translatedRange = '30 Tage';
+  translate(range: string): string {
+    let translatedRange;
+    if (range === 'lastHour') {
+      translatedRange = 'letzte Stunde';
+    } else if (range === 'today') {
+      translatedRange = 'heute';
+    } else if (range === 'yesterday') {
+      translatedRange = 'gestern';
+    } else if (range === 'last7days') {
+      translatedRange = '7 Tage';
+    } else if (range === 'last30days') {
+      translatedRange = '30 Tage';
+    }
+    return translatedRange;
   }
-  return translatedRange;
-}
 
 }
