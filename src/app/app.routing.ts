@@ -3,16 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { WeatherComponent } from "./weather/weather.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { AppDiagramComponent } from "./app-diagram/app-diagram.component";
+import { AboutComponent } from "./about/about.component";
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/#weather',
+    redirectTo: '/weather',
     pathMatch: 'full'
   },
-  { path: '#weather', component: WeatherComponent },
-  { path: '#diagrams', component: AppDiagramComponent },
-  { path: '#settings', component: SettingsComponent }
+  { path: 'weather', component: WeatherComponent },
+  { path: 'diagrams', component: AppDiagramComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 export const appRoutingProviders: any[] = [];

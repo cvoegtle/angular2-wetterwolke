@@ -19,6 +19,7 @@ import { WeatherStatsComponent } from './weather-stats/weather-stats.component';
 import { WeatherStatLineComponent } from './weather-stats/weather-stat-line.component';
 import { DiagramViewerComponent } from './diagram-viewer/diagram-viewer.component';
 import { AppDiagramComponent } from './app-diagram/app-diagram.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { AppDiagramComponent } from './app-diagram/app-diagram.component';
     WeatherStatLineComponent,
     DiagramViewerComponent,
     AppDiagramComponent,
+    AboutComponent,
   ],
   providers: [
     WeatherDataService,
