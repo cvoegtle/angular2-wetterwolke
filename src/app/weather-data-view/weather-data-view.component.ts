@@ -9,7 +9,6 @@ import { Location } from "../services/location";
 })
 export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
-  @Input() location: Location;
   private expanded:boolean = false;
 
   constructor() { }
@@ -21,4 +20,7 @@ export class WeatherDataViewComponent implements OnInit {
     this.expanded = !this.expanded;
   }
 
+  showForecast() {
+    window.open(this.weatherData.locationObj.weatherForecast);
+  }
 }

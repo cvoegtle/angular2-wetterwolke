@@ -1,26 +1,31 @@
 <div class="weather-data-view">
-<md-card >
-  <div class="title">
-    <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
-    <button class="icon-button" (click)="toggle()">
-      <i class="material-icons " *ngIf="!expanded">keyboard_arrow_down</i>
-      <i class="material-icons " *ngIf="expanded">keyboard_arrow_up</i>
-    </button>
-  </div>
-  <div class="value">Temperatur: {{weatherData.temperature}} °C</div>
-  <div class="value">Luftfeuchtigkeit: {{weatherData.humidity}} %</div>
-  <div class="value" *ngIf="weatherData.rain_today">
-    Regen: {{weatherData.rain_today | number:'1.1-1'}} l
-    <span *ngIf="weatherData.rain"> / {{weatherData.rain | number:'1.1-1'}} l</span>
-  </div>
-  <div class="value" *ngIf="weatherData.wind">
-    Wind: {{weatherData.wind | number:'1.1-1'}} km/h
-  </div>
-  <div class="value" *ngIf="weatherData.watt">
-    Solarleistung: {{weatherData.watt | number:'1.1-1'}} W
-  </div>
-  <app-weather-stats *ngIf="expanded" [locationId]="weatherData.id"></app-weather-stats>
-  <app-diagram-viewer *ngIf="expanded && weatherData.locationObj.hasOwnProperty('diagrams')"
-                      [diagrams]="weatherData.locationObj.diagrams"></app-diagram-viewer>
-</md-card>
+  <md-card>
+    <div class="title">
+      <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
+
+      <button class="icon-button" (click)="toggle()">
+        <i class="material-icons" *ngIf="!expanded">keyboard_arrow_down</i>
+        <i class="material-icons" *ngIf="expanded">keyboard_arrow_up</i>
+      </button>
+
+      <button class="icon-button" *ngIf="weatherData.locationObj.weatherForecast" (click)="showForecast()">
+        <i class="material-icons">filter_drama</i>
+      </button>
+    </div>
+    <div class="value">Temperatur: {{weatherData.temperature}} °C</div>
+    <div class="value">Luftfeuchtigkeit: {{weatherData.humidity}} %</div>
+    <div class="value" *ngIf="weatherData.rain_today">
+      Regen: {{weatherData.rain_today | number:'1.1-1'}} l
+      <span *ngIf="weatherData.rain"> / {{weatherData.rain | number:'1.1-1'}} l</span>
+    </div>
+    <div class="value" *ngIf="weatherData.wind">
+      Wind: {{weatherData.wind | number:'1.1-1'}} km/h
+    </div>
+    <div class="value" *ngIf="weatherData.watt">
+      Solarleistung: {{weatherData.watt | number:'1.1-1'}} W
+    </div>
+    <app-weather-stats *ngIf="expanded" [locationId]="weatherData.id"></app-weather-stats>
+    <app-diagram-viewer *ngIf="expanded && weatherData.locationObj.hasOwnProperty('diagrams')"
+                        [diagrams]="weatherData.locationObj.diagrams"></app-diagram-viewer>
+  </md-card>
 </div>
