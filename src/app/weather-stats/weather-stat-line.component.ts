@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Input } from "@angular/core/src/metadata/directives";
-import { WeatherStatLine } from "../weather-stat-line";
+import { WeatherStatLine } from "../services/weather-stat-line";
 
 @Component({
   selector: 'app-weather-stat-line',

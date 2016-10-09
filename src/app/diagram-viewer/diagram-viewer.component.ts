@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Diagram } from "../diagram";
+import { Diagram } from "../services/diagram";
 import { Input } from "@angular/core/src/metadata/directives";
 
 @Component({

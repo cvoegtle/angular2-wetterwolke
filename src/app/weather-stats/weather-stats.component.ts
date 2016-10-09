@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherDataService } from "../weather-data.service";
+import { WeatherDataService } from "../services/weather-data.service";
 import { Input } from "@angular/core/src/metadata/directives";
-import { WeatherStatLine } from "../weather-stat-line";
-import { WeatherStats } from "../weather-stats";
+import { WeatherStatLine } from "../services/weather-stat-line";
+import { WeatherStats } from "../services/weather-stats";
 
 @Component({
   selector: 'app-weather-stats',

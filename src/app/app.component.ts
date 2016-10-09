@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import './rxjs-operators';
-import { WeatherDataService } from "./weather-data.service";
+import { WeatherDataService } from "./services/weather-data.service";
 
 @Component({
   selector: 'app-root',

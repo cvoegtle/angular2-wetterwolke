@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { Location } from "../location";
+import { Location } from "../services/location";
 import { Input, Output } from "@angular/core/src/metadata/directives";
 
 @Component({

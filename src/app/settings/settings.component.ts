@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Location } from "../location";
-import { LocationService } from "../location.service";
+import { Location } from "../services/location";
+import { LocationService } from "../services/location.service";
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Component({

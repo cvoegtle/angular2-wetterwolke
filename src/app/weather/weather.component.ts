@@ -1,9 +1,9 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { WeatherDataService } from "../weather-data.service";
-import { WeatherData } from "../weather-data";
+import { WeatherDataService } from "../services/weather-data.service";
+import { WeatherData } from "../services/weather-data";
 import { Observable } from "rxjs/Observable";
-import { LocationService } from "../location.service";
-import { Location } from "../location";
+import { LocationService } from "../services/location.service";
+import { Location } from "../services/location";
 import { location } from "@angular/platform-browser/src/facade/browser";
 
 @Component({
