@@ -17,6 +17,7 @@ import { LocationViewComponent } from './settings/location-view.component';
 import { LocationService } from "./settings/location.service";
 import { WeatherStatsComponent } from './weather-stats/weather-stats.component';
 import { WeatherStatLineComponent } from './weather-stats/weather-stat-line.component';
+import { DiagramViewerComponent } from './diagram-viewer/diagram-viewer.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { WeatherStatLineComponent } from './weather-stats/weather-stat-line.comp
     LocationViewComponent,
     WeatherStatsComponent,
     WeatherStatLineComponent,
+    DiagramViewerComponent,
   ],
   providers: [
     WeatherDataService,
