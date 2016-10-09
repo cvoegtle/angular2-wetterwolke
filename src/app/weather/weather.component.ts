@@ -2,7 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { WeatherDataService } from "../services/weather-data.service";
 import { WeatherData } from "../services/weather-data";
 import { Observable } from "rxjs/Observable";
-import { LocationService } from "../services/location.service";
+import { ConfigurationService } from "../services/configuration.service";
 import { Location } from "../services/location";
 import { location } from "@angular/platform-browser/src/facade/browser";
 
@@ -19,14 +19,14 @@ export class WeatherComponent implements OnInit {
   @Output() updateEvent = new EventEmitter();
 
   constructor(private weatherService: WeatherDataService,
-     private locationService: LocationService) {}
+     private configurationService: ConfigurationService) {}
 
   ngOnInit() {
     this.fetchLocations();
   }
 
   private fetchLocations() {
-    this.locationService.fetchLocations().subscribe(locations => this.locations = locations,
+    this.configurationService.fetchConfiguration().subscribe(configuration => this.locations = configuration.locations,
         error => this.errorMessage = <any>error, () => this.locationsReceived());
   }
 

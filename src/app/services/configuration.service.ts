@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Location } from "./location";
 import { Observable } from "rxjs/Observable";
 import { Http, Response } from "@angular/http";
+import { Configuration } from "./configuration";
 
 @Injectable()
-export class LocationService {
-  private locations:Observable<Location[]>;
+export class ConfigurationService {
+  private configuration:Observable<Configuration>;
 
   constructor(private http: Http) { }
 
-  fetchLocations(): Observable<Location[]> {
-    if (this.locations == null) {
-      this.locations = this.http.get("./locations.json").map(this.extractData)
+  fetchConfiguration(): Observable<Configuration> {
+    if (this.configuration == null) {
+      this.configuration = this.http.get("./configuration.json").map(this.extractData)
           .catch(this.handleError);
     }
-    return this.locations;
+    return this.configuration;
     }
 
   private extractData(response: Response) {

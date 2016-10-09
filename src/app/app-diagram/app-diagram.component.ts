@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Diagram } from "../services/diagram";
+import { ConfigurationService } from "../services/configuration.service";
+import { Configuration } from "../services/configuration";
 
 @Component({
   selector: 'app-app-diagram',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-diagram.component.css']
 })
 export class AppDiagramComponent implements OnInit {
+  private diagrams: Diagram[];
+  private errorMessage:string;
 
-  constructor() { }
+  constructor(private configurationService: ConfigurationService) { }
 
   ngOnInit() {
+    this.configurationService.fetchConfiguration().subscribe(configuration => this.diagrams = configuration.diagrams,
+        error => this.errorMessage = <any>error);
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Location } from "../services/location";
-import { LocationService } from "../services/location.service";
+import { ConfigurationService } from "../services/configuration.service";
 import { Cookie } from 'ng2-cookies/ng2-cookies';
+import { Configuration } from "../services/configuration";
 
 @Component({
   selector: 'app-settings',
@@ -11,15 +12,16 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 export class SettingsComponent implements OnInit {
   private locations: Location[];
 
-  constructor(private locationService: LocationService) {
+  constructor(private configurationService: ConfigurationService) {
   }
 
   ngOnInit() {
-    this.locationService.fetchLocations().subscribe(fetchedLocations => this.processLocations(fetchedLocations));
+    this.configurationService.fetchConfiguration().subscribe(fetchedConfiguration => this.processLocations(fetchedConfiguration));
   }
 
-  private processLocations(fetchedLocations:Location[]) {
+  private processLocations(fetchedConfiguration:Configuration) {
     let activeLocations:string = Cookie.get('activeLocations');
+    let fetchedLocations:Location[] = fetchedConfiguration.locations;
     for (let location of fetchedLocations) {
       location.enabled = activeLocations.indexOf(location.location) >= 0;
     }
