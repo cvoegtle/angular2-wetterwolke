@@ -5,12 +5,16 @@ import { Http, Response } from "@angular/http";
 
 @Injectable()
 export class LocationService {
+  private locations:Observable<Location[]>;
 
   constructor(private http: Http) { }
 
   fetchLocations(): Observable<Location[]> {
-    return this.http.get("./locations.json").map(this.extractData)
-        .catch(this.handleError);
+    if (this.locations == null) {
+      this.locations = this.http.get("./locations.json").map(this.extractData)
+          .catch(this.handleError);
+    }
+    return this.locations;
     }
 
   private extractData(response: Response) {
