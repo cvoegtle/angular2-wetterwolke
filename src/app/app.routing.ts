@@ -7,12 +7,12 @@ import { AppDiagramComponent } from "./app-diagram/app-diagram.component";
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/weather',
+    redirectTo: '/#weather',
     pathMatch: 'full'
   },
-  { path: 'weather', component: WeatherComponent },
-  { path: 'diagrams', component: AppDiagramComponent },
-  { path: 'settings', component: SettingsComponent }
+  { path: '#weather', component: WeatherComponent },
+  { path: '#diagrams', component: AppDiagramComponent },
+  { path: '#settings', component: SettingsComponent }
 ];
 
 export const appRoutingProviders: any[] = [];
