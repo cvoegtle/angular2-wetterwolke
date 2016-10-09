@@ -2,8 +2,8 @@ import { Injectable, EventEmitter } from "@angular/core";
 import { WeatherData } from "./weather-data";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
-import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { WeatherStats } from "./weather-stats";
+import { CookieService } from "./cookie.service";
 
 @Injectable()
 export class WeatherDataService {
@@ -27,11 +27,7 @@ export class WeatherDataService {
   }
 
   private getActiveUrl():string {
-    let activeLocations:string = Cookie.get('activeLocations');
-    if (activeLocations == null || activeLocations == "") {
-      activeLocations = "tegelweg8,ochsengasse,herzo,shenzhen";
-    }
-    return this.weatherUrl + "&locations=" + activeLocations;
+    return this.weatherUrl + "&locations=" + new CookieService().getActiveLocations();
   }
 
   private getStatsUrl(location:string) {

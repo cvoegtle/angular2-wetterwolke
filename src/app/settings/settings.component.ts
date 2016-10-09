@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Location } from "../services/location";
 import { ConfigurationService } from "../services/configuration.service";
-import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { Configuration } from "../services/configuration";
+import { CookieService } from "../services/cookie.service";
 
 @Component({
   selector: 'app-settings',
@@ -11,24 +11,25 @@ import { Configuration } from "../services/configuration";
 })
 export class SettingsComponent implements OnInit {
   private locations: Location[];
+  private cookieService:CookieService = new CookieService();
 
   constructor(private configurationService: ConfigurationService) {
   }
 
   ngOnInit() {
-    this.configurationService.fetchConfiguration().subscribe(fetchedConfiguration => this.processLocations(fetchedConfiguration));
+    this.configurationService.fetchConfiguration().subscribe(configuration => this.extractLocations(configuration));
   }
 
-  private processLocations(fetchedConfiguration:Configuration) {
-    let activeLocations:string = Cookie.get('activeLocations');
-    let fetchedLocations:Location[] = fetchedConfiguration.locations;
+  private extractLocations(configuration:Configuration):void {
+    let activeLocations:string = this.cookieService.getActiveLocations();
+    let fetchedLocations:Location[] = configuration.locations;
     for (let location of fetchedLocations) {
       location.enabled = activeLocations.indexOf(location.location) >= 0;
     }
     this.locations=fetchedLocations;
   }
 
-  onLocationChanged(locationId: string) {
+  onLocationChanged(locationId: string):void {
     let activeLocations: string = "";
     for (let location of this.locations) {
       if (location.location == locationId) {
@@ -38,6 +39,7 @@ export class SettingsComponent implements OnInit {
         activeLocations += location.location+",";
       }
     }
-    Cookie.set('activeLocations', activeLocations, 180);
+    this.cookieService.setActiveLocations(activeLocations);
   }
+
 }
