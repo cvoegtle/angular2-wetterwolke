@@ -2,6 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WeatherComponent } from "./weather/weather.component";
 import { SettingsComponent } from "./settings/settings.component";
+import { AppDiagramComponent } from "./app-diagram/app-diagram.component";
 
 const appRoutes: Routes = [
   {
@@ -10,6 +11,7 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   { path: 'weather', component: WeatherComponent },
+  { path: 'diagrams', component: AppDiagramComponent },
   { path: 'settings', component: SettingsComponent }
 ];
 
