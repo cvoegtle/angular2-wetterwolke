@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { WeatherData } from "../weather-data";
+import { Location } from "../location";
 
 @Component({
   selector: 'app-weather-data-list',
@@ -8,5 +9,4 @@ import { WeatherData } from "../weather-data";
 })
 export class WeatherDataListComponent {
   @Input() weatherDataList: WeatherData[] = [];
-
 }

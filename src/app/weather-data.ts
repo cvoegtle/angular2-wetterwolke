@@ -1,3 +1,4 @@
+import { Location } from "./location";
 export interface WeatherData {
   timestamp: string;
   id: string;
@@ -14,4 +15,6 @@ export interface WeatherData {
   wind?: number;
   watt?: number;
   forecast?: string;
+
+  locationObj?: Location;
 }

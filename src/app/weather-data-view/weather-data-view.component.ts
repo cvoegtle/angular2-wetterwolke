@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeatherData } from "../weather-data";
+import { Location } from "../location";
 
 @Component({
   selector: 'app-weather-data-view',
@@ -8,6 +9,7 @@ import { WeatherData } from "../weather-data";
 })
 export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
+  @Input() location: Location;
   private expanded:boolean = false;
 
   constructor() { }

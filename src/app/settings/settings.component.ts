@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Location } from "./location";
-import { LocationService } from "./location.service";
+import { Location } from "../location";
+import { LocationService } from "../location.service";
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Component({
@@ -20,8 +20,7 @@ export class SettingsComponent implements OnInit {
 
   private processLocations(fetchedLocations:Location[]) {
     let activeLocations:string = Cookie.get('activeLocations');
-    for (let i:number = 0; i < fetchedLocations.length; i++) {
-      let location:Location = fetchedLocations[i];
+    for (let location of fetchedLocations) {
       location.enabled = activeLocations.indexOf(location.location) >= 0;
     }
     this.locations=fetchedLocations;
@@ -29,8 +28,7 @@ export class SettingsComponent implements OnInit {
 
   onLocationChanged(locationId: string) {
     let activeLocations: string = "";
-    for (let i:number = 0; i < this.locations.length; i++) {
-      let location:Location = this.locations[i];
+    for (let location of this.locations) {
       if (location.location == locationId) {
         location.enabled = !location.enabled;
       }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Diagram } from "../diagram";
+import { Input } from "@angular/core/src/metadata/directives";
 
 @Component({
   selector: 'app-diagram-viewer',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diagram-viewer.component.css']
 })
 export class DiagramViewerComponent implements OnInit {
+  @Input() diagrams: Diagram[];
 
   constructor() { }
 

@@ -14,7 +14,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { SettingsComponent } from './settings/settings.component';
 import { routing, appRoutingProviders } from "./app.routing";
 import { LocationViewComponent } from './settings/location-view.component';
-import { LocationService } from "./settings/location.service";
+import { LocationService } from "./location.service";
 import { WeatherStatsComponent } from './weather-stats/weather-stats.component';
 import { WeatherStatLineComponent } from './weather-stats/weather-stat-line.component';
 import { DiagramViewerComponent } from './diagram-viewer/diagram-viewer.component';

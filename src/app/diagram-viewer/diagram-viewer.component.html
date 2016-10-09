@@ -1,19 +1,11 @@
 <md-card class="diagram_viewer">
   <md-tab-group>
-    <md-tab>
+    <md-tab *ngFor="let diagram of diagrams">
       <template md-tab-label>
-        Earth
+        {{diagram.description}}
       </template>
       <template md-tab-content>
-        <p>EARTH</p>
-      </template>
-    </md-tab>
-    <md-tab>
-      <template md-tab-label>
-        Fire
-      </template>
-      <template md-tab-content>
-        <p>FIRE</p>
+        <img src="{{diagram.url}}" alt="{{diagram.description}}" class="diagram_image">
       </template>
     </md-tab>
   </md-tab-group>
