@@ -6,12 +6,7 @@ import { AppDiagramComponent } from "./app-diagram/app-diagram.component";
 import { AboutComponent } from "./about/about.component";
 
 const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: '/weather',
-    pathMatch: 'full'
-  },
-  { path: 'weather', component: WeatherComponent },
+  { path: '', component: WeatherComponent },
   { path: 'diagrams', component: AppDiagramComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'about', component: AboutComponent }
