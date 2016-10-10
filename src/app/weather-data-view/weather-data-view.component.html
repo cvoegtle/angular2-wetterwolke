@@ -3,9 +3,9 @@
     <div class="title">
       <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
 
-      <button class="icon-button" (click)="toggle()">
-        <i title="mehr anzeigen" class="material-icons" *ngIf="!expanded">keyboard_arrow_down</i>
-        <i title="weniger anzeigen" class="material-icons" *ngIf="expanded">keyboard_arrow_up</i>
+      <button class="icon-button" (click)="toggle()" [attr.title]="expanded?'weniger anzeigen':'mehr anzeigen'">
+        <i  class="material-icons" *ngIf="!expanded">keyboard_arrow_down</i>
+        <i class="material-icons" *ngIf="expanded">keyboard_arrow_up</i>
       </button>
 
       <button title="Wetter Vorhersage" class="icon-button" *ngIf="weatherData.locationObj.weatherForecast" (click)="showForecast()">
