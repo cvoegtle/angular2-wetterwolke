@@ -9,10 +9,15 @@ import { Input } from "@angular/core/src/metadata/directives";
 })
 export class DiagramViewerComponent implements OnInit {
   @Input() diagrams: Diagram[];
+  private time:Date = new Date();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  makeUnique(url:string):string {
+    return url+"&unique=" + this.time;
   }
 
 }

@@ -5,7 +5,9 @@
         {{diagram.description}}
       </template>
       <template md-tab-content>
-        <img src="{{diagram.url}}" alt="{{diagram.description}}" class="diagram_image">
+        <div class="diagram_image">
+        <img src="{{makeUnique(diagram.url)}}" alt="{{diagram.description}}" >
+        </div>
       </template>
     </md-tab>
   </md-tab-group>
