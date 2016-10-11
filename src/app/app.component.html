@@ -1,4 +1,16 @@
-<md-sidenav-layout [class.m2app-dark]="false">
+<md-toolbar color="primary">
+  <button class="app-icon-button" (click)="sidenav.toggle()">
+    <i class="material-icons app-toolbar-menu">menu</i>
+  </button>
+
+  {{title}}
+
+  <span class="app-toolbar-filler"></span>
+
+  {{updateTime | dateHHmm}}
+
+</md-toolbar>
+<md-sidenav-layout>
 
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     <md-list>
@@ -21,17 +33,5 @@
     </md-list>
   </md-sidenav>
 
-  <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
-
-    {{title}}
-
-    <span class="app-toolbar-filler"></span>
-
-    {{updateTime | dateHHmm}}
-
-  </md-toolbar>
   <router-outlet></router-outlet>
 </md-sidenav-layout>
