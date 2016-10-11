@@ -20,6 +20,7 @@ import { WeatherStatLineComponent } from './weather-stats/weather-stat-line.comp
 import { DiagramViewerComponent } from './diagram-viewer/diagram-viewer.component';
 import { AppDiagramComponent } from './app-diagram/app-diagram.component';
 import { AboutComponent } from './about/about.component';
+import { NumberFormatPipe } from './number-format.pipe';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { AboutComponent } from './about/about.component';
     DiagramViewerComponent,
     AppDiagramComponent,
     AboutComponent,
+    NumberFormatPipe,
   ],
   providers: [
     WeatherDataService,

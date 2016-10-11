@@ -12,17 +12,17 @@
         <i class="material-icons">filter_drama</i>
       </button>
     </div>
-    <div class="value">Temperatur: {{weatherData.temperature}} °C</div>
-    <div class="value">Luftfeuchtigkeit: {{weatherData.humidity}} %</div>
+    <div class="value">Temperatur: {{weatherData.temperature | num}} °C</div>
+    <div class="value">Luftfeuchtigkeit: {{weatherData.humidity | num}} %</div>
     <div class="value" *ngIf="weatherData.rain_today">
-      Regen: {{weatherData.rain_today | number:'1.1-1'}} l
-      <span *ngIf="weatherData.rain"> / {{weatherData.rain | number:'1.1-1'}} l</span>
+      Regen: {{weatherData.rain_today | num}} l
+      <span *ngIf="weatherData.rain"> / {{weatherData.rain | num}} l</span>
     </div>
     <div class="value" *ngIf="weatherData.wind">
-      Wind: {{weatherData.wind | number:'1.1-1'}} km/h
+      Wind: {{weatherData.wind | num }} km/h
     </div>
     <div class="value" *ngIf="weatherData.watt">
-      Solarleistung: {{weatherData.watt | number:'1.1-1'}} W
+      Solarleistung: {{weatherData.watt | num }} W
     </div>
     <app-weather-stats *ngIf="expanded" [locationId]="weatherData.id"></app-weather-stats>
     <app-diagram-viewer *ngIf="expanded && weatherData.locationObj.hasOwnProperty('diagrams')"
