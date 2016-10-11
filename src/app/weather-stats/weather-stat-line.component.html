@@ -1,7 +1,7 @@
 <div class="row" *ngIf="stat.range !== 'lastHour'">
     <div class="column_narrow caption">{{translate(stat.range)}}</div>
-    <div class="column_narrow">&nbsp;<span *ngIf="stat.rain">{{stat.rain | number:"1.1-1"}} l</span></div>
-    <div class="column">{{stat.minTemperature | number:"1.1-1"}} °C</div>
-    <div class="column">{{stat.maxTemperature | number:"1.1-1"}} °C</div>
-    <div class="column_wide" *ngIf="stat.kwh">{{stat.kwh | number:"1.1-1"}} kwh</div>
+    <div class="column_narrow">&nbsp;<span *ngIf="stat.rain">{{stat.rain | num}} l</span></div>
+    <div class="column">{{stat.minTemperature | num}} °C</div>
+    <div class="column">{{stat.maxTemperature | num}} °C</div>
+    <div class="column_wide" *ngIf="stat.kwh">{{stat.kwh | num}} kwh</div>
 </div>
