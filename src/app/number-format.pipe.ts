@@ -6,7 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class NumberFormatPipe implements PipeTransform {
 
   transform(value: number, args?: any): string {
-    let formatted:string = value.toFixed(1);
+    let formatted = "";
+    if (value != null) {
+      formatted = value.toFixed(1);
+    }
     return formatted.replace("\.", ",");
   }
 

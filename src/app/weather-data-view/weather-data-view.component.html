@@ -1,5 +1,5 @@
 <div class="weather-data-view">
-  <md-card>
+  <md-card [attr.class]="isLate() ?'late':''">
     <div class="title">
       <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
 

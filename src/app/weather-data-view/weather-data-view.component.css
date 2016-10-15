@@ -17,6 +17,10 @@
     padding: 3px;
 }
 
+.late {
+    color: darkred;
+}
+
 .icon-button {
     box-shadow: none;
     user-select: none;

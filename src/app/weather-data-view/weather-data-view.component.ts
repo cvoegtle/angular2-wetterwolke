@@ -20,6 +20,12 @@ export class WeatherDataViewComponent implements OnInit {
     this.expanded = !this.expanded;
   }
 
+  isLate():boolean {
+    let now:number = Date.now();
+    let timestamp:number = Date.parse(this.weatherData.timestamp);
+    return (now - timestamp) > 60*20*1000;
+  }
+
   showForecast() {
     window.open(this.weatherData.locationObj.weatherForecast);
   }
