@@ -1,10 +1,10 @@
-import { MigrateWetterwolkePage } from './app.po';
+import { Angular2UpgradePage } from './app.po';
 
-describe('migrate-wetterwolke App', function() {
-  let page: MigrateWetterwolkePage;
+describe('angular2-upgrade App', function() {
+  let page: Angular2UpgradePage;
 
   beforeEach(() => {
-    page = new MigrateWetterwolkePage();
+    page = new Angular2UpgradePage();
   });
 
   it('should display message saying app works', () => {

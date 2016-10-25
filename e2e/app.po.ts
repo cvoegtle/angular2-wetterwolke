@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class MigrateWetterwolkePage {
+export class Angular2UpgradePage {
   navigateTo() {
     return browser.get('/');
   }
