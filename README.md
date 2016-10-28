@@ -6,7 +6,7 @@ Die Wetter Wolke ist ein Netz privater Wetterstationen, die in Deutschland verte
 
 ## Abhängigkeiten
 
-[Angular2](https://angular.io/) 2.1
+[Angular2.1](https://angular.io/)
 
 Erstellt mit [Angular2-Cli](https://github.com/angular/angular-cli) v1.0.0-beta18
 
