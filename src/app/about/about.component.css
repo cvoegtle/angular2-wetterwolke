@@ -1,5 +1,5 @@
 .about-list {
     border: 1px solid rgba(0,0,0,0.12);
-    width: 350px;
-    margin: 20px;
+    margin: 10px;
+    flex: 1 1 auto;
 }
