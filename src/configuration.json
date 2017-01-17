@@ -234,6 +234,19 @@
       ]
     },
     {
+      "location": "instant",
+      "city": "Irgendwo in Deutschland",
+      "cityShortcut": "MO",
+      "weatherForecast": "",
+      "windRelevant": false,
+      "diagrams": [
+        {
+          "description": "7 Tage",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1380559031&format=image"
+        }
+      ]
+    },
+    {
       "location": "shenzhen",
       "city": "Shenzen",
       "cityShortcut": "SZ",
