@@ -5,4 +5,8 @@
       <app-location-view *ngFor="let location of locations" [location]="location" (changed)="onLocationChanged($event)"></app-location-view>
     </md-list>
   </md-card>
+  <md-card>
+    <h2>Code-Wort</h2>
+    <md-input placeholder="Geheimnis" [value]="codeword" (change)="onCodewordChanged($event)"></md-input>
+  </md-card>
 </div>

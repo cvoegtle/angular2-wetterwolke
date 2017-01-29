@@ -11,6 +11,7 @@ import { CookieService } from "../services/cookie.service";
 })
 export class SettingsComponent implements OnInit {
   private locations: Location[];
+  private codeword: string;
   private cookieService:CookieService = new CookieService();
 
   constructor(private configurationService: ConfigurationService) {
@@ -18,6 +19,7 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
     this.configurationService.fetchConfiguration().subscribe(configuration => this.extractLocations(configuration));
+    this.codeword = this.cookieService.getCodeword();
   }
 
   private extractLocations(configuration:Configuration):void {
@@ -27,6 +29,11 @@ export class SettingsComponent implements OnInit {
       location.enabled = activeLocations.indexOf(location.location) >= 0;
     }
     this.locations=fetchedLocations;
+  }
+
+  onCodewordChanged(event) {
+    this.codeword = event.target.value;
+    this.cookieService.setCodeword(this.codeword);
   }
 
   onLocationChanged(locationId: string):void {

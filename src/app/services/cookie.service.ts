@@ -4,6 +4,7 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 @Injectable()
 export class CookieService {
   private activeLocationsCookie: string = "activeLocations";
+  private codeword: string = "codeword";
 
   constructor() {
   }
@@ -18,5 +19,13 @@ export class CookieService {
 
   public setActiveLocations(activeLocations:string): void {
     Cookie.set(this.activeLocationsCookie, activeLocations, 180);
+  }
+
+  public  getCodeword(): string {
+    return Cookie.get(this.codeword);
+  }
+
+  public setCodeword(newWord: string) {
+    Cookie.set(this.codeword, newWord, 180);
   }
 }
