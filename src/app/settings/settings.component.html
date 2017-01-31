@@ -1,12 +1,12 @@
 <div class="app-content">
   <md-card>
-    <h2>Stationen einblenden</h2>
+    <md-card-title>Stationen einblenden</md-card-title>
     <md-list>
       <app-location-view *ngFor="let location of locations" [location]="location" (changed)="onLocationChanged($event)"></app-location-view>
     </md-list>
   </md-card>
-  <md-card>
-    <h2>Code-Wort</h2>
+  <md-card class="app-card">
+    <md-card-title>Code-Wort</md-card-title>
     <md-input placeholder="Geheimnis" [value]="codeword" (change)="onCodewordChanged($event)"></md-input>
   </md-card>
 </div>
