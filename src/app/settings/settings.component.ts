@@ -15,7 +15,6 @@ export class SettingsComponent implements OnInit {
   private codeword: string;
   private frequency: number;
   private cookieService:CookieService = new CookieService();
-  @ViewChild('secret') secretInput;
 
   constructor(private configurationService: ConfigurationService) {
   }
@@ -35,12 +34,7 @@ export class SettingsComponent implements OnInit {
     this.locations=fetchedLocations;
   }
 
-  onFrequencyChanged(event: MdSliderChange) {
-    this.frequency = event.value;
-  }
-
-  onCodewordChanged(event: Event) {
-    this.codeword = this.secretInput.value;
+  onCodewordChanged(event) {
     this.cookieService.setCodeword(this.codeword);
   }
 
