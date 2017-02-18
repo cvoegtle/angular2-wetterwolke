@@ -1,8 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { Location } from "../services/location";
 import { ConfigurationService } from "../services/configuration.service";
 import { Configuration } from "../services/configuration";
 import { CookieService } from "../services/cookie.service";
+import { MdSliderChange } from "@angular/material";
 
 @Component({
   selector: 'app-settings',
@@ -12,7 +13,9 @@ import { CookieService } from "../services/cookie.service";
 export class SettingsComponent implements OnInit {
   private locations: Location[];
   private codeword: string;
+  private frequency: number;
   private cookieService:CookieService = new CookieService();
+  @ViewChild('secret') secretInput;
 
   constructor(private configurationService: ConfigurationService) {
   }
@@ -20,6 +23,7 @@ export class SettingsComponent implements OnInit {
   ngOnInit() {
     this.configurationService.fetchConfiguration().subscribe(configuration => this.extractLocations(configuration));
     this.codeword = this.cookieService.getCodeword();
+    this.frequency = 3;
   }
 
   private extractLocations(configuration:Configuration):void {
@@ -31,8 +35,12 @@ export class SettingsComponent implements OnInit {
     this.locations=fetchedLocations;
   }
 
-  onCodewordChanged(event) {
-    this.codeword = event.target.value;
+  onFrequencyChanged(event: MdSliderChange) {
+    this.frequency = event.value;
+  }
+
+  onCodewordChanged(event: Event) {
+    this.codeword = this.secretInput.value;
     this.cookieService.setCodeword(this.codeword);
   }
 
