@@ -5,5 +5,6 @@
 
 .diagram_image {
     min-height: 371px;
+    overflow-y: auto;
 }
 
