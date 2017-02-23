@@ -31,8 +31,9 @@
     text-decoration: none;
 }
 
-.mat-line {
-    display: inherit !important;
+.menu-line {
+    display: inherit;
+    padding: 0;
 }
 
 .menu-item {
