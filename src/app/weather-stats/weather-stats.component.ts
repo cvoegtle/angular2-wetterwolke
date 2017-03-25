@@ -10,9 +10,8 @@ import { WeatherStats } from "../services/weather-stats";
 })
 export class WeatherStatsComponent implements OnInit {
   @Input() locationId:string;
-  private stats:WeatherStatLine[];
-
-  private kwhCaption:string;
+  public stats:WeatherStatLine[];
+  public kwhCaption:string;
 
 
   constructor(private weatherService: WeatherDataService) { }

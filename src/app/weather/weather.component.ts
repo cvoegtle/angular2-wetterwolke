@@ -11,10 +11,10 @@ import { Location } from "../services/location";
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
-  private locations: Location[];
-  private weatherDataList: WeatherData[];
+  public locations: Location[];
+  public weatherDataList: WeatherData[];
 
-  private errorMessage: string;
+  public errorMessage: string;
   @Output() updateEvent = new EventEmitter();
 
   constructor(private weatherService: WeatherDataService,

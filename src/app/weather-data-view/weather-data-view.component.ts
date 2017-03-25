@@ -9,7 +9,7 @@ import { Location } from "../services/location";
 })
 export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
-  private expanded:boolean = false;
+  public expanded:boolean = false;
 
   constructor() { }
 

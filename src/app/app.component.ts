@@ -8,8 +8,8 @@ import { WeatherDataService } from "./services/weather-data.service";
   styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
-  private title: string = 'Wetter Wolke';
-  private updateTime: Date;
+  public title: string = 'Wetter Wolke';
+  public updateTime: Date;
 
   constructor(private weatherService: WeatherDataService) {
     this.weatherService.weatherChanged.subscribe(updateTs => this.updateTime = updateTs);

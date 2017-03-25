@@ -9,8 +9,8 @@ import { Configuration } from "../services/configuration";
   styleUrls: ['./app-diagram.component.css']
 })
 export class AppDiagramComponent implements OnInit {
-  private diagrams: Diagram[];
-  private errorMessage:string;
+  public diagrams: Diagram[];
+  public errorMessage:string;
 
   constructor(private configurationService: ConfigurationService) { }
 

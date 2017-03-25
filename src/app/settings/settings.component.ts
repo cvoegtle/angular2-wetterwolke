@@ -11,9 +11,9 @@ import { MdSliderChange } from "@angular/material";
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-  private locations: Location[];
-  private codeword: string;
-  private frequency: number;
+  public locations: Location[];
+  public codeword: string;
+  public frequency: number;
   private cookieService:CookieService = new CookieService();
 
   constructor(private configurationService: ConfigurationService) {
