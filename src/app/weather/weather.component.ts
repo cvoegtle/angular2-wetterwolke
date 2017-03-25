@@ -4,7 +4,6 @@ import { WeatherData } from "../services/weather-data";
 import { Observable } from "rxjs/Observable";
 import { ConfigurationService } from "../services/configuration.service";
 import { Location } from "../services/location";
-import { location } from "@angular/platform-browser/src/facade/browser";
 
 @Component({
   selector: 'app-weather',

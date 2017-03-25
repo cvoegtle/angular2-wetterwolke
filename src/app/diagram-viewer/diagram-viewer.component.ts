@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Diagram } from "../services/diagram";
-import { Input } from "@angular/core/src/metadata/directives";
 
 @Component({
   selector: 'app-diagram-viewer',

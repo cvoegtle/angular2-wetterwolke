@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { Input } from "@angular/core/src/metadata/directives";
+import { Component, Input, OnInit } from "@angular/core";
 import { WeatherStatLine } from "../services/weather-stat-line";
 
 @Component({
@@ -16,7 +15,7 @@ export class WeatherStatLineComponent implements OnInit {
   ngOnInit() {
   }
 
-  translate(range: string): string {
+  static translate(range: string): string {
     let translatedRange;
     if (range === 'lastHour') {
       translatedRange = 'letzte Stunde';

@@ -21,12 +21,14 @@ import { DiagramViewerComponent } from './diagram-viewer/diagram-viewer.componen
 import { AppDiagramComponent } from './app-diagram/app-diagram.component';
 import { AboutComponent } from './about/about.component';
 import { NumberFormatPipe } from './number-format.pipe';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     MaterialModule.forRoot(),
     routing
   ],

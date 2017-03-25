@@ -1,6 +1,5 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { Location } from "../services/location";
-import { Input, Output } from "@angular/core/src/metadata/directives";
 
 @Component({
   selector: 'app-location-view',

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WeatherDataService } from "../services/weather-data.service";
-import { Input } from "@angular/core/src/metadata/directives";
 import { WeatherStatLine } from "../services/weather-stat-line";
 import { WeatherStats } from "../services/weather-stats";
 
