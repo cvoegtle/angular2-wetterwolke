@@ -15,7 +15,7 @@ export class WeatherStatLineComponent implements OnInit {
   ngOnInit() {
   }
 
-  static translate(range: string): string {
+  translate(range: string): string {
     let translatedRange;
     if (range === 'lastHour') {
       translatedRange = 'letzte Stunde';

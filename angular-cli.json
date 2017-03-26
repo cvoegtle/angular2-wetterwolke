@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.32",
+    "version": "0.9.0",
     "name": "angular2-wetterwolke"
   },
   "apps": [
@@ -12,6 +12,7 @@
         "favicon.ico",
         "configuration.json",
         "manifest.webapp",
+        "styles.css",
         "images/*"
       ],
       "index": "index.html",
