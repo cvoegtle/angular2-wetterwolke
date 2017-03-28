@@ -11,3 +11,19 @@
 .app-card  {
   margin-top: 10px;
 }
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: lightblue;
+  overflow: scroll;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: greenyellow;
+}
