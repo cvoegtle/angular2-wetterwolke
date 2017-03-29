@@ -1,6 +1,6 @@
 <md-toolbar color="primary">
   <button class="app-icon-button" (click)="sidenav.toggle()">
-    <i class="material-icons app-toolbar-menu">menu</i>
+    <md-icon class="app-toolbar-menu">menu</md-icon>
   </button>
 
   {{title}}
@@ -15,20 +15,20 @@
   <md-sidenav #sidenav mode="top" class="app-sidenav">
     <md-list>
       <md-list-item class="menu_line">
-        <a routerLink="/" routerLinkActive="active" (click)="sidenav.close()">
-          <span><i class="material-icons">settings_system_daydream</i></span> <span class="menu-item">Wetter</span></a>
+        <a routerLink="/" (click)="sidenav.close()">
+          <span><md-icon>settings_system_daydream</md-icon></span> <span class="menu-item">Wetter</span></a>
       </md-list-item>
       <md-list-item class="menu_line" >
-        <a routerLink="/diagrams" routerLinkActive="active" (click)="sidenav.close()">
-          <i class="material-icons">collections</i> <span class="menu-item">Diagramme</span></a>
+        <a routerLink="/diagrams" (click)="sidenav.close()">
+          <md-icon>collections</md-icon> <span class="menu-item">Diagramme</span></a>
       </md-list-item>
       <md-list-item class="menu_line">
-        <a routerLink="/settings" routerLinkActive="active" (click)="sidenav.close()">
-          <i class="material-icons">settings</i> <span class="menu-item">Einstellungen</span></a>
+        <a routerLink="/settings" (click)="sidenav.close()">
+          <md-icon>settings</md-icon> <span class="menu-item">Einstellungen</span></a>
       </md-list-item>
       <md-list-item class="menu_line">
-        <a routerLink="/about" routerLinkActive="active" (click)="sidenav.close()">
-          <i class="material-icons">feedback</i> <span class="menu-item">Über Wetterwolke</span></a>
+        <a routerLink="/about" (click)="sidenav.close()">
+          <md-icon>feedback</md-icon> <span class="menu-item">Über Wetterwolke</span></a>
       </md-list-item>
     </md-list>
   </md-sidenav>
