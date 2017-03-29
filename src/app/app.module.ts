@@ -22,6 +22,7 @@ import { AppDiagramComponent } from './app-diagram/app-diagram.component';
 import { AboutComponent } from './about/about.component';
 import { NumberFormatPipe } from './number-format.pipe';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import 'hammerjs';
 
 @NgModule({
   imports: [
