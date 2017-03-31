@@ -14,16 +14,12 @@
 
 
 .app-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  position:absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
   background: lightblue;
   overflow: scroll;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: greenyellow;
-}
