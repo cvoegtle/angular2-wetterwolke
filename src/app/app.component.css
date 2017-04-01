@@ -1,5 +1,9 @@
 .working-container {
-  background: brown;
+    position: absolute;
+    top: 62px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .app-toolbar-filler {
@@ -53,13 +57,16 @@ md-list a {
     border-radius: 4px;
     color: buttontext;
 }
+
 md-list a:visited, a:link {
     color: buttontext;
 }
+
 md-list a:hover {
     color: buttontext;
     background-color: #eee;
 }
+
 md-list a.active {
     color: buttontext;
 }

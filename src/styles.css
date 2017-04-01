@@ -3,23 +3,20 @@
 /* @import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css'; */
 /* @import '~@angular/material/core/theming/prebuilt/purple-green.css'; */
 
-.app-content  {
+.app-content {
     padding: 10px;
     min-height: 230px;
 }
 
-.app-card  {
-  margin-top: 10px;
+.app-card {
+    margin-top: 10px;
 }
 
-
 .app-container {
-  position:absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  background: lightblue;
-  overflow: scroll;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
