@@ -28,4 +28,16 @@ export class CookieService {
   public setCodeword(newWord: string) {
     Cookie.set(this.codeword, newWord, 180);
   }
+
+  public getExpanded(location: string): boolean {
+    return Cookie.get(location) != null;
+  }
+
+  public setExpanded(location: string, expanded: boolean) {
+    if (expanded) {
+      Cookie.set(location, "expanded", 180);
+    } else {
+      Cookie.delete(location);
+    }
+  }
 }

@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { NumberFormatPipe } from './number-format.pipe';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import 'hammerjs';
+import { CookieService } from "./services/cookie.service";
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import 'hammerjs';
   providers: [
     WeatherDataService,
     ConfigurationService,
-    appRoutingProviders
+    appRoutingProviders,
+    CookieService
   ],
 
   bootstrap: [AppComponent]

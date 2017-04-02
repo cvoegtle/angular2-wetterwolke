@@ -12,9 +12,8 @@ import { CookieService } from "../services/cookie.service";
 export class SettingsComponent implements OnInit {
   public locations: Location[];
   public codeword: string;
-  private cookieService: CookieService = new CookieService();
 
-  constructor(private configurationService: ConfigurationService) {
+  constructor(private configurationService: ConfigurationService, private cookieService: CookieService) {
   }
 
   ngOnInit() {

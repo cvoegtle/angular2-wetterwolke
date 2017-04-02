@@ -8,11 +8,10 @@ import { CookieService } from "./cookie.service";
 @Injectable()
 export class WeatherDataService {
   private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&secret=';
-  private cookieService: CookieService = new CookieService();
 
   public weatherChanged = new EventEmitter<Date>();
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private cookieService: CookieService) {
   }
 
   fetchWeatherStats(location:string):Observable<WeatherStats[]> {
@@ -29,7 +28,7 @@ export class WeatherDataService {
 
   private getActiveUrl():string {
     let secret: string = this.cookieService.getCodeword();
-    return this.weatherUrl + secret + "&locations=" + new CookieService().getActiveLocations();
+    return this.weatherUrl + secret + "&locations=" + this.cookieService.getActiveLocations();
   }
 
   private getStatsUrl(location:string) {
