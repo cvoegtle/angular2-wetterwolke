@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule about .
+RewriteRule diagrams .
+RewriteRule settings .
