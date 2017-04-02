@@ -4,12 +4,16 @@
       <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
 
       <button class="icon-button" (click)="toggle()" [attr.title]="expanded?'weniger anzeigen':'mehr anzeigen'">
-        <i  class="material-icons" *ngIf="!expanded">keyboard_arrow_down</i>
-        <i class="material-icons" *ngIf="expanded">keyboard_arrow_up</i>
+        <md-icon *ngIf="!expanded">keyboard_arrow_down</md-icon>
+        <md-icon *ngIf="expanded">keyboard_arrow_up</md-icon>
+      </button>
+
+      <button title="Diagramme" class="icon-button" (click)="gotoDiagram()">
+        <md-icon>panorama</md-icon>
       </button>
 
       <button title="Wetter Vorhersage" class="icon-button" *ngIf="weatherData.locationObj.weatherForecast" (click)="showForecast()">
-        <i class="material-icons">filter_drama</i>
+        <md-icon>filter_drama</md-icon>
       </button>
     </div>
     <div class="value">Temperatur: {{weatherData.temperature | num}} °C<span *ngIf="weatherData.inside_temperature"> / {{weatherData.inside_temperature | num}} °C</span></div>

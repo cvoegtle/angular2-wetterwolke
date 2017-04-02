@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 import { WeatherData } from "../services/weather-data";
-import { Location } from "../services/location";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-weather-data-view',
@@ -9,9 +9,10 @@ import { Location } from "../services/location";
 })
 export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
-  public expanded:boolean = false;
+  public expanded: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
   }
@@ -20,13 +21,17 @@ export class WeatherDataViewComponent implements OnInit {
     this.expanded = !this.expanded;
   }
 
-  isLate():boolean {
-    let now:number = Date.now();
-    let timestamp:number = Date.parse(this.weatherData.timestamp);
-    return (now - timestamp) > 60*20*1000;
+  isLate(): boolean {
+    let now: number = Date.now();
+    let timestamp: number = Date.parse(this.weatherData.timestamp);
+    return (now - timestamp) > 60 * 20 * 1000;
   }
 
   showForecast() {
     window.open(this.weatherData.locationObj.weatherForecast);
+  }
+
+  gotoDiagram() {
+    this.router.navigate(['/diagrams', this.weatherData.id]);
   }
 }

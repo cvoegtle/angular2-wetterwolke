@@ -1,13 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 import { Http, Response } from "@angular/http";
 import { Configuration } from "./configuration";
+import { Diagram } from "./diagram";
 
 @Injectable()
 export class ConfigurationService {
-  private configuration:Observable<Configuration>;
+  private configuration: Observable<Configuration>;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
   fetchConfiguration(): Observable<Configuration> {
     if (this.configuration == null) {
@@ -15,18 +17,19 @@ export class ConfigurationService {
           .catch(this.handleError);
     }
     return this.configuration;
-    }
+  }
 
   private extractData(response: Response) {
     let body = response.json();
     return body || {};
   }
 
-  private handleError(error: any)  {
+  private handleError(error: any) {
     let errMsg = (error.message) ? error.message :
         error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);  }
+    return Observable.throw(errMsg);
+  }
 
 
 }
