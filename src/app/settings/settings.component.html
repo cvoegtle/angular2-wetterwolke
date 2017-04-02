@@ -11,8 +11,4 @@
       <input mdInput #secret placeholder="Geheimnis" [(ngModel)]="codeword" (change)="onCodewordChanged($event)"/>
     </md-input-container>
   </md-card>
-  <md-card class="app-card">
-    <md-card-title>Update-Frequency - {{frequency}}</md-card-title>
-    <md-slider min="1" max="5" [(ngModel)]="frequency"></md-slider>
-  </md-card>
 </div>
