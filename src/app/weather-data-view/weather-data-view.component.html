@@ -29,7 +29,5 @@
       Solarleistung: {{weatherData.watt | num }} W
     </div>
     <app-weather-stats *ngIf="expanded" [locationId]="weatherData.id"></app-weather-stats>
-    <app-diagram-viewer *ngIf="expanded && weatherData.locationObj.hasOwnProperty('diagrams')"
-                        [diagrams]="weatherData.locationObj.diagrams"></app-diagram-viewer>
   </md-card>
 </div>
