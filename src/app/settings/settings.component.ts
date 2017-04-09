@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Location } from "../services/location";
 import { ConfigurationService } from "../services/configuration.service";
 import { Configuration } from "../services/configuration";
-import { CookieService } from "../services/cookie.service";
+import { LocalStorageService } from "../services/localstorage.service";
 
 @Component({
   selector: 'app-settings',
@@ -13,7 +13,7 @@ export class SettingsComponent implements OnInit {
   public locations: Location[];
   public codeword: string;
 
-  constructor(private configurationService: ConfigurationService, private cookieService: CookieService) {
+  constructor(private configurationService: ConfigurationService, private cookieService: LocalStorageService) {
   }
 
   ngOnInit() {

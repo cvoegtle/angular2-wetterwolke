@@ -1,43 +1,42 @@
 import { Injectable } from "@angular/core";
-import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Injectable()
-export class CookieService {
-  private activeLocationsCookie: string = "activeLocations";
+export class LocalStorageService {
+  private activeLocations: string = "activeLocations";
   private codeword: string = "codeword";
 
   constructor() {
   }
 
   public getActiveLocations(): string {
-    let activeLocations = Cookie.get(this.activeLocationsCookie);
+    let activeLocations = localStorage.getItem(this.activeLocations);
     if (activeLocations == null || activeLocations == "") {
       activeLocations = "tegelweg8,herzo,ochsengasse,shenzhen";
     }
     return activeLocations;
   }
 
-  public setActiveLocations(activeLocations:string): void {
-    Cookie.set(this.activeLocationsCookie, activeLocations, 180);
+  public setActiveLocations(activeLocations: string): void {
+    localStorage.setItem(this.activeLocations, activeLocations);
   }
 
   public  getCodeword(): string {
-    return Cookie.get(this.codeword);
+    return localStorage.getItem(this.codeword);
   }
 
   public setCodeword(newWord: string) {
-    Cookie.set(this.codeword, newWord, 180);
+    localStorage.setItem(this.codeword, newWord);
   }
 
   public getExpanded(location: string): boolean {
-    return Cookie.get(location) != null;
+    return localStorage.getItem(location) != null;
   }
 
   public setExpanded(location: string, expanded: boolean) {
     if (expanded) {
-      Cookie.set(location, "expanded", 180);
+      localStorage.setItem(location, "expanded");
     } else {
-      Cookie.delete(location);
+      localStorage.removeItem(location);
     }
   }
 }

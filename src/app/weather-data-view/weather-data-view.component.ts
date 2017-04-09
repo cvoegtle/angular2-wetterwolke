@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { WeatherData } from "../services/weather-data";
 import { Router } from "@angular/router";
-import { CookieService } from "../services/cookie.service";
+import { LocalStorageService } from "../services/localstorage.service";
 
 @Component({
   selector: 'app-weather-data-view',
@@ -12,7 +12,7 @@ export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
   public expanded: boolean = false;
 
-  constructor(private router: Router, private cookieService: CookieService) {
+  constructor(private router: Router, private cookieService: LocalStorageService) {
   }
 
   ngOnInit() {

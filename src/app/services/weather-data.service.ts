@@ -3,7 +3,7 @@ import { WeatherData } from "./weather-data";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 import { WeatherStats } from "./weather-stats";
-import { CookieService } from "./cookie.service";
+import { LocalStorageService } from "./localstorage.service";
 
 @Injectable()
 export class WeatherDataService {
@@ -11,7 +11,7 @@ export class WeatherDataService {
 
   public weatherChanged = new EventEmitter<Date>();
 
-  constructor(private http: Http, private cookieService: CookieService) {
+  constructor(private http: Http, private cookieService: LocalStorageService) {
   }
 
   fetchWeatherStats(location:string):Observable<WeatherStats[]> {

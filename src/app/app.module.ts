@@ -23,7 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { NumberFormatPipe } from './number-format.pipe';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import 'hammerjs';
-import { CookieService } from "./services/cookie.service";
+import { LocalStorageService } from "./services/localstorage.service";
 
 @NgModule({
   imports: [
@@ -53,7 +53,7 @@ import { CookieService } from "./services/cookie.service";
     WeatherDataService,
     ConfigurationService,
     appRoutingProviders,
-    CookieService
+    LocalStorageService
   ],
 
   bootstrap: [AppComponent]
