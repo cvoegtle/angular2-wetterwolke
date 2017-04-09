@@ -12,16 +12,16 @@ export class WeatherDataViewComponent implements OnInit {
   @Input() weatherData: WeatherData;
   public expanded: boolean = false;
 
-  constructor(private router: Router, private cookieService: LocalStorageService) {
+  constructor(private router: Router, private localStorage: LocalStorageService) {
   }
 
   ngOnInit() {
-    this.expanded = this.cookieService.getExpanded(this.weatherData.id);
+    this.expanded = this.localStorage.getExpanded(this.weatherData.id);
   }
 
   toggle() {
     this.expanded = !this.expanded;
-    this.cookieService.setExpanded(this.weatherData.id, this.expanded);
+    this.localStorage.setExpanded(this.weatherData.id, this.expanded);
   }
 
   isLate(): boolean {

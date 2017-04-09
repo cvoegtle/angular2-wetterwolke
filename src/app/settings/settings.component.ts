@@ -13,16 +13,16 @@ export class SettingsComponent implements OnInit {
   public locations: Location[];
   public codeword: string;
 
-  constructor(private configurationService: ConfigurationService, private cookieService: LocalStorageService) {
+  constructor(private configurationService: ConfigurationService, private localStorage: LocalStorageService) {
   }
 
   ngOnInit() {
     this.configurationService.fetchConfiguration().subscribe(configuration => this.extractLocations(configuration));
-    this.codeword = this.cookieService.getCodeword();
+    this.codeword = this.localStorage.getCodeword();
   }
 
   private extractLocations(configuration: Configuration): void {
-    let activeLocations: string = this.cookieService.getActiveLocations();
+    let activeLocations: string = this.localStorage.getActiveLocations();
     let fetchedLocations: Location[] = configuration.locations;
     for (let location of fetchedLocations) {
       location.enabled = activeLocations.indexOf(location.location) >= 0;
@@ -31,7 +31,7 @@ export class SettingsComponent implements OnInit {
   }
 
   onCodewordChanged(event) {
-    this.cookieService.setCodeword(this.codeword);
+    this.localStorage.setCodeword(this.codeword);
   }
 
   onLocationChanged(locationId: string): void {
@@ -44,7 +44,7 @@ export class SettingsComponent implements OnInit {
         activeLocations += location.location + ",";
       }
     }
-    this.cookieService.setActiveLocations(activeLocations);
+    this.localStorage.setActiveLocations(activeLocations);
   }
 
 }

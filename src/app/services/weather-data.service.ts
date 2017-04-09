@@ -11,7 +11,7 @@ export class WeatherDataService {
 
   public weatherChanged = new EventEmitter<Date>();
 
-  constructor(private http: Http, private cookieService: LocalStorageService) {
+  constructor(private http: Http, private localStorage: LocalStorageService) {
   }
 
   fetchWeatherStats(location:string):Observable<WeatherStats[]> {
@@ -27,8 +27,8 @@ export class WeatherDataService {
   }
 
   private getActiveUrl():string {
-    let secret: string = this.cookieService.getCodeword();
-    return this.weatherUrl + secret + "&locations=" + this.cookieService.getActiveLocations();
+    let secret: string = this.localStorage.getCodeword();
+    return this.weatherUrl + secret + "&locations=" + this.localStorage.getActiveLocations();
   }
 
   private getStatsUrl(location:string) {
