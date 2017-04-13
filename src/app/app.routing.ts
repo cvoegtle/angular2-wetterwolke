@@ -8,7 +8,7 @@ import { AboutComponent } from "./about/about.component";
 const appRoutes: Routes = [
   { path: '', component: WeatherComponent },
   { path: 'diagrams', component: AppDiagramComponent },
-  { path: 'diagrams/:location', component: AppDiagramComponent },
+  { path: 'diagrams/:location/:image', component: AppDiagramComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'about', component: AboutComponent }
 ];

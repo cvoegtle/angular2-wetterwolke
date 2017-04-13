@@ -1,6 +1,6 @@
 <div class="app-content">
   <md-card class="diagram_viewer">
-    <md-tab-group>
+    <md-tab-group [selectedIndex]="index">
       <md-tab *ngFor="let diagram of diagrams" label="{{diagram.description}}">
         <div class="diagram_image">
           <img src="{{makeUnique(diagram.url)}}" alt="{{diagram.description}}">

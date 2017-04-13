@@ -11,6 +11,7 @@ import { Configuration } from "../services/configuration";
 })
 export class AppDiagramComponent implements OnInit {
   public diagrams: Diagram[];
+  public image: number;
   public errorMessage: string;
 
   constructor(private configurationService: ConfigurationService, private route: ActivatedRoute) {
@@ -18,6 +19,7 @@ export class AppDiagramComponent implements OnInit {
 
   ngOnInit() {
     let location = this.route.snapshot.params['location'];
+    this.image = this.route.snapshot.params['image'];
     this.fetchDiagrams(location);
   }
 
@@ -28,7 +30,7 @@ export class AppDiagramComponent implements OnInit {
   }
 
   private fetchDiagramsFromConfiguration(configuration: Configuration, location: string) {
-    if (!location) {
+    if (!location || location == 'global') {
       this.diagrams = configuration.diagrams;
     } else {
       for (let current of configuration.locations) {
@@ -38,5 +40,7 @@ export class AppDiagramComponent implements OnInit {
         }
       }
     }
+
   }
+
 }

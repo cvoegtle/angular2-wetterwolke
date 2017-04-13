@@ -35,6 +35,6 @@ export class WeatherDataViewComponent implements OnInit {
   }
 
   gotoDiagram() {
-    this.router.navigate(['/diagrams', this.weatherData.id]);
+    this.router.navigate(['/diagrams', this.weatherData.id, 0]);
   }
 }
