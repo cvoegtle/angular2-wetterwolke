@@ -3,3 +3,11 @@
     margin: 10px;
     flex: 1 1 auto;
 }
+
+a {
+    color: whitesmoke;
+}
+
+a:visited {
+    color: wheat;
+}

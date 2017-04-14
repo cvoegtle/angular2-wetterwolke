@@ -7,7 +7,7 @@ import { LocalStorageService } from "./localstorage.service";
 
 @Injectable()
 export class WeatherDataService {
-  private weatherUrl: string = 'http://wettercentral.appspot.com/weatherstation/read?utf8&new&secret=';
+  private weatherUrl: string = 'https://wettercentral.appspot.com/weatherstation/read?utf8&new&secret=';
 
   public weatherChanged = new EventEmitter<Date>();
 

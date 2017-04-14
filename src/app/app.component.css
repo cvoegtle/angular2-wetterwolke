@@ -6,6 +6,12 @@
     bottom: 0px;
 }
 
+@media (max-width: 600px) {
+    .working-container {
+        top: 56px;
+    }
+}
+
 .app-toolbar-filler {
     flex: 1 1 auto;
 }
@@ -16,7 +22,7 @@
 }
 
 .app-sidenav {
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .app-menu-item {
@@ -42,6 +48,7 @@
 .menu_line {
     display: inherit;
     padding: 0;
+    color: white;
 }
 
 .menu-item {
@@ -55,18 +62,17 @@ md-list a {
     display: flex;
     align-items: center;
     border-radius: 4px;
-    color: buttontext;
 }
 
 md-list a:visited, a:link {
-    color: buttontext;
+    color: whitesmoke;
 }
 
 md-list a:hover {
-    color: buttontext;
-    background-color: #eee;
+    color: whitesmoke;
+    background-color: #555;
 }
 
 md-list a.active {
-    color: buttontext;
+    color: whitesmoke;
 }

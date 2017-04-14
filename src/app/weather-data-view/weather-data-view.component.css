@@ -27,18 +27,14 @@
     background: none;
     border: none;
     cursor: pointer;
-    filter: none;
     font-weight: normal;
-    height: auto;
-    line-height: inherit;
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 0px;
     margin-right: 8px;
     min-width: 0;
-    padding: 0;
-    text-align: left;
-    text-decoration: none;
+    padding: 0 3px;
     float: right;
+    color: whitesmoke;
 }
 
