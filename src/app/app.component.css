@@ -48,7 +48,6 @@
 .menu_line {
     display: inherit;
     padding: 0;
-    color: white;
 }
 
 .menu-item {
@@ -62,17 +61,18 @@ md-list a {
     display: flex;
     align-items: center;
     border-radius: 4px;
+    color: buttontext;
 }
 
 md-list a:visited, a:link {
-    color: whitesmoke;
+    color: buttontext;
 }
 
 md-list a:hover {
-    color: whitesmoke;
-    background-color: #555;
+    color: buttontext;
+    background-color: #eee;
 }
 
 md-list a.active {
-    color: whitesmoke;
+    color: buttontext;
 }

@@ -17,11 +17,15 @@
       "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=2099860984&format=image"
     },
     {
-      "description": "Sommertage",
+      "description": "Sommer 2017",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1031038123&format=image"
+    },
+    {
+      "description": "Sommer 2016",
       "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=308371431&format=image"
     },
     {
-      "description": "Wintertage",
+      "description": "Winter 2016/17",
       "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=252844556&format=image"
     },
     {
