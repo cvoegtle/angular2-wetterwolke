@@ -1,6 +1,6 @@
 <div class="weather-data-view">
-  <md-card [attr.class]="isLate() ?'late':''">
-    <div class="title">
+  <md-card >
+    <div [attr.class]="isLate() ?'title late':'title'">
       <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
 
       <button class="icon-button" (click)="toggle()" [attr.title]="expanded?'weniger anzeigen':'mehr anzeigen'">

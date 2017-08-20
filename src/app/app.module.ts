@@ -3,8 +3,6 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
-import {MaterialRootModule} from '@angular/material';
-
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./services/weather-data.service";
 import { WeatherDataListComponent } from "./weather-data-list/weather-data-list.component";
@@ -24,6 +22,10 @@ import { NumberFormatPipe } from './number-format.pipe';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import 'hammerjs';
 import { LocalStorageService } from "./services/localstorage.service";
+import {
+  MdCardModule, MdCheckboxModule, MdIconModule, MdInputModule, MdLineModule, MdListModule, MdSidenavModule,
+  MdTabsModule, MdToolbarModule
+} from "@angular/material";
 
 @NgModule({
   imports: [
@@ -31,8 +33,16 @@ import { LocalStorageService } from "./services/localstorage.service";
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MaterialRootModule,
-    routing
+    routing,
+    MdCardModule,
+    MdIconModule,
+    MdListModule,
+    MdTabsModule,
+    MdCheckboxModule,
+    MdInputModule,
+    MdLineModule,
+    MdToolbarModule,
+      MdSidenavModule
   ],
   declarations: [
     AppComponent,
