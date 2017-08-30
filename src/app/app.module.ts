@@ -26,6 +26,7 @@ import {
   MdCardModule, MdCheckboxModule, MdIconModule, MdInputModule, MdLineModule, MdListModule, MdSidenavModule,
   MdTabsModule, MdToolbarModule
 } from "@angular/material";
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   imports: [
@@ -58,6 +59,7 @@ import {
     AppDiagramComponent,
     AboutComponent,
     NumberFormatPipe,
+    ChartComponent,
   ],
   providers: [
     WeatherDataService,
