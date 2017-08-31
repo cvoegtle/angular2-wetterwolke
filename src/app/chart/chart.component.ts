@@ -61,7 +61,7 @@ export class ChartComponent implements OnInit {
         responsive: true,
         title: {
           display: true,
-          text: "Temperatur und Luftfeuchtigkeit"
+          text: "Aktuelle Wetterlage"
         },
         scales: {
           yAxes: [{
