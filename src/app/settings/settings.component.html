@@ -1,14 +1,14 @@
 <div class="app-content">
-  <md-card>
-    <md-card-title>Stationen einblenden</md-card-title>
-    <md-list>
+  <mat-card>
+    <mat-card-title>Stationen einblenden</mat-card-title>
+    <mat-list>
       <app-location-view *ngFor="let location of locations" [location]="location" (changed)="onLocationChanged($event)"></app-location-view>
-    </md-list>
-  </md-card>
-  <md-card class="app-card">
-    <md-card-title>Code-Wort</md-card-title>
-    <md-input-container>
-      <input mdInput #secret placeholder="Geheimnis" [(ngModel)]="codeword" (change)="onCodewordChanged($event)"/>
-    </md-input-container>
-  </md-card>
+    </mat-list>
+  </mat-card>
+  <mat-card class="app-card">
+    <mat-card-title>Code-Wort</mat-card-title>
+    <mat-input-container>
+      <input matInput #secret placeholder="Geheimnis" [(ngModel)]="codeword" (change)="onCodewordChanged($event)"/>
+    </mat-input-container>
+  </mat-card>
 </div>

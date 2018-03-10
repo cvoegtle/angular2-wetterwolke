@@ -1,12 +1,12 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./services/weather-data.service";
-import { WeatherDataListComponent } from "./weather-data-list/weather-data-list.component";
-import { WeatherDataViewComponent } from "./weather-data-view/weather-data-view.component";
+import { WeatherDataListComponent } from "./weather-data-list";
+import { WeatherDataViewComponent } from "./weather-data-view";
 import { DateFormat } from "./pipe.date-format";
 import { WeatherComponent } from './weather/weather.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -23,26 +23,26 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import 'hammerjs';
 import { LocalStorageService } from "./services/localstorage.service";
 import {
-  MdCardModule, MdCheckboxModule, MdIconModule, MdInputModule, MdLineModule, MdListModule, MdSidenavModule,
-  MdTabsModule, MdToolbarModule
+  MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule, MatLineModule, MatListModule, MatSidenavModule,
+  MatTabsModule, MatToolbarModule
 } from "@angular/material";
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     routing,
-    MdCardModule,
-    MdIconModule,
-    MdListModule,
-    MdTabsModule,
-    MdCheckboxModule,
-    MdInputModule,
-    MdLineModule,
-    MdToolbarModule,
-      MdSidenavModule
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatLineModule,
+    MatToolbarModule,
+      MatSidenavModule
   ],
   declarations: [
     AppComponent,

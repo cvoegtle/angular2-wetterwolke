@@ -1,6 +1,6 @@
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
   <button class="app-icon-button" (click)="sidenav.toggle()">
-    <md-icon class="app-toolbar-menu">menu</md-icon>
+    <mat-icon class="app-toolbar-menu">menu</mat-icon>
   </button>
 
   {{title}}
@@ -9,28 +9,28 @@
 
   {{updateTime | dateHHmm}}
 
-</md-toolbar>
-<md-sidenav-container class="working-container">
+</mat-toolbar>
+<mat-sidenav-container class="working-container">
 
-  <md-sidenav #sidenav mode="top" class="app-sidenav">
-    <md-list>
-      <md-list-item >
+  <mat-sidenav #sidenav mode="top" class="app-sidenav">
+    <mat-list>
+      <mat-list-item >
         <a routerLink="/" (click)="sidenav.close()">
-          <span><md-icon>settings_system_daydream</md-icon></span> <span class="menu-item">Wetter</span></a>
-      </md-list-item>
-      <md-list-item >
+          <span><mat-icon>settings_system_daydream</mat-icon></span> <span class="menu-item">Wetter</span></a>
+      </mat-list-item>
+      <mat-list-item >
         <a routerLink="/diagrams" (click)="sidenav.close()">
-          <md-icon>collections</md-icon> <span class="menu-item">Diagramme</span></a>
-      </md-list-item>
-      <md-list-item >
+          <mat-icon>collections</mat-icon> <span class="menu-item">Diagramme</span></a>
+      </mat-list-item>
+      <mat-list-item >
         <a routerLink="/settings" (click)="sidenav.close()">
-          <md-icon>settings</md-icon> <span class="menu-item">Einstellungen</span></a>
-      </md-list-item>
-      <md-list-item >
+          <mat-icon>settings</mat-icon> <span class="menu-item">Einstellungen</span></a>
+      </mat-list-item>
+      <mat-list-item >
         <a routerLink="/about" (click)="sidenav.close()">
-          <md-icon>feedback</md-icon> <span class="menu-item">Über Wetterwolke</span></a>
-      </md-list-item>
-    </md-list>
-  </md-sidenav>
+          <mat-icon>feedback</mat-icon> <span class="menu-item">Über Wetterwolke</span></a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
   <router-outlet></router-outlet>
-</md-sidenav-container>
+</mat-sidenav-container>

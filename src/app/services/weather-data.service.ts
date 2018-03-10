@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from "@angular/core";
 import { WeatherData } from "./weather-data";
-import { Http, Response } from "@angular/http";
+import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs/Observable";
 import { WeatherStats } from "./weather-stats";
 import { LocalStorageService } from "./localstorage.service";
@@ -11,19 +11,17 @@ export class WeatherDataService {
 
   public weatherChanged = new EventEmitter<Date>();
 
-  constructor(private http: Http, private localStorage: LocalStorageService) {
+  constructor(private http: HttpClient, private localStorage: LocalStorageService) {
   }
 
   fetchWeatherStats(location:string):Observable<WeatherStats[]> {
     this.weatherChanged.emit(new Date());
-    return this.http.get(this.getStatsUrl(location)).map(this.extractData)
-        .catch(this.handleError);
+    return this.http.get(this.getStatsUrl(location)).pipe().catch(this.handleError);
   }
 
   fetchWeatherData(): Observable<WeatherData[]> {
     this.weatherChanged.emit(new Date());
-    return this.http.get(this.getActiveUrl()).map(this.extractData)
-        .catch(this.handleError);
+    return this.http.get(this.getActiveUrl()).pipe().catch(this.handleError);
   }
 
   private getActiveUrl():string {
@@ -33,11 +31,6 @@ export class WeatherDataService {
 
   private getStatsUrl(location:string) {
     return this.weatherUrl + "&type=stats&locations=" +location;
-  }
-
-  private extractData(response: Response) {
-    let body = response.json();
-    return body || {};
   }
 
   private handleError(error: any)  {

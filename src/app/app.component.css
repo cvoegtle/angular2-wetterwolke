@@ -44,16 +44,11 @@
     text-decoration: none;
 }
 
-.menu_line {
-    display: inherit;
-    padding: 0;
-}
-
 .menu-item {
     margin-left: 10px;
 }
 
-md-list a {
+mat-list a {
     padding: 5px 10px;
     text-decoration: none;
     margin-top: 10px;
@@ -63,15 +58,15 @@ md-list a {
     color: buttontext;
 }
 
-md-list a:visited, a:link {
+mat-list a:visited, a:link {
     color: buttontext;
 }
 
-md-list a:hover {
+mat-list a:hover {
     color: buttontext;
     background-color: #eee;
 }
 
-md-list a.active {
+mat-list a.active {
     color: buttontext;
 }

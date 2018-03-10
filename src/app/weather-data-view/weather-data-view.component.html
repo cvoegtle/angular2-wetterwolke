@@ -1,19 +1,19 @@
 <div class="weather-data-view">
-  <md-card >
+  <mat-card >
     <div [attr.class]="isLate() ?'title late':'title'">
       <span class="title-text">{{weatherData.location}} - {{weatherData.localtime}}</span>
 
       <button class="icon-button" (click)="toggle()" [attr.title]="expanded?'weniger anzeigen':'mehr anzeigen'">
-        <md-icon *ngIf="!expanded">keyboard_arrow_down</md-icon>
-        <md-icon *ngIf="expanded">keyboard_arrow_up</md-icon>
+        <mat-icon *ngIf="!expanded">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="expanded">keyboard_arrow_up</mat-icon>
       </button>
 
       <button title="Diagramme" class="icon-button" (click)="gotoDiagram()">
-        <md-icon>panorama</md-icon>
+        <mat-icon>panorama</mat-icon>
       </button>
 
       <button title="Wetter Vorhersage" class="icon-button" *ngIf="weatherData.locationObj.weatherForecast" (click)="showForecast()">
-        <md-icon>filter_drama</md-icon>
+        <mat-icon>filter_drama</mat-icon>
       </button>
     </div>
     <div class="value">Temperatur: {{weatherData.temperature | num}} °C<span *ngIf="weatherData.inside_temperature"> / {{weatherData.inside_temperature | num}} °C</span></div>
@@ -29,5 +29,5 @@
       Solarleistung: {{weatherData.watt | num }} W
     </div>
     <app-weather-stats *ngIf="expanded" [locationId]="weatherData.id"></app-weather-stats>
-  </md-card>
+  </mat-card>
 </div>
