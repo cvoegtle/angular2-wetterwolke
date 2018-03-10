@@ -4,14 +4,12 @@ import { WeatherComponent } from "./weather/weather.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { AppDiagramComponent } from "./app-diagram/app-diagram.component";
 import { AboutComponent } from "./about/about.component";
-import {ChartComponent} from "./chart/chart.component";
 
 const appRoutes: Routes = [
   { path: '', component: WeatherComponent },
   { path: 'diagrams', component: AppDiagramComponent },
   { path: 'diagrams/:location/:image', component: AppDiagramComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'chart', component: ChartComponent },
   { path: 'about', component: AboutComponent }
 ];
 
