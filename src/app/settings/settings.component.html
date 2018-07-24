@@ -7,8 +7,8 @@
   </mat-card>
   <mat-card class="app-card">
     <mat-card-title>Code-Wort</mat-card-title>
-    <mat-input-container>
+    <mat-form-field>
       <input matInput #secret placeholder="Geheimnis" [(ngModel)]="codeword" (change)="onCodewordChanged($event)"/>
-    </mat-input-container>
+    </mat-form-field>
   </mat-card>
 </div>

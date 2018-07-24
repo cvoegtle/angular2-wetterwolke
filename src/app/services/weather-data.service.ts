@@ -1,7 +1,9 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Injectable, EventEmitter } from "@angular/core";
 import { WeatherData } from "./weather-data";
 import { HttpClient } from '@angular/common/http';
-import { Observable } from "rxjs/Observable";
 import { WeatherStats } from "./weather-stats";
 import { LocalStorageService } from "./localstorage.service";
 
@@ -16,12 +18,12 @@ export class WeatherDataService {
 
   fetchWeatherStats(location:string):Observable<WeatherStats[]> {
     this.weatherChanged.emit(new Date());
-    return this.http.get(this.getStatsUrl(location)).pipe().catch(this.handleError);
+    return this.http.get<WeatherStats[]>(this.getStatsUrl(location)).pipe(catchError(this.handleError));
   }
 
   fetchWeatherData(): Observable<WeatherData[]> {
     this.weatherChanged.emit(new Date());
-    return this.http.get(this.getActiveUrl()).pipe().catch(this.handleError);
+    return this.http.get<WeatherData[]>(this.getActiveUrl()).pipe(catchError(this.handleError));
   }
 
   private getActiveUrl():string {
@@ -37,6 +39,6 @@ export class WeatherDataService {
     let errMsg = (error.message) ? error.message :
         error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);  }
+    return observableThrowError(errMsg);  }
 
 }

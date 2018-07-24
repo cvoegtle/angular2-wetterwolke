@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { WeatherDataService } from "../services/weather-data.service";
 import { WeatherData } from "../services/weather-data";
-import { Observable } from "rxjs/Observable";
+import { Observable, interval } from "rxjs";
 import { ConfigurationService } from "../services/configuration.service";
 import { Location } from "../services/location";
 
@@ -31,7 +31,7 @@ export class WeatherComponent implements OnInit {
 
   private locationsReceived() {
     this.fetchWeatherData();
-    Observable.interval(180000).subscribe(() => this.fetchWeatherData());
+    interval(180000).subscribe(() => this.fetchWeatherData());
   }
 
   private fetchWeatherData(): void {
