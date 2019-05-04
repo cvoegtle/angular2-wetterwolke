@@ -64,6 +64,14 @@
       ]
     },
     {
+      "location": "wetterwolke",
+      "city": "Paderborn 2.0",
+      "cityShortcut": "DEV",
+      "weatherForecast": "http://wetterstationen.meteomedia.de/?station=104300&wahl=vorhersage",
+      "windRelevant": true,
+      "diagrams": []
+    },
+    {
       "location": "bali",
       "city": "Bad Lippspringe",
       "cityShortcut": "BaLi",
