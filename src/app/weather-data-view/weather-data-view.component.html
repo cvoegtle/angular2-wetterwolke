@@ -18,6 +18,9 @@
     </div>
     <div class="value">Temperatur: {{weatherData.temperature | num}} °C<span *ngIf="weatherData.inside_temperature"> / {{weatherData.inside_temperature | num}} °C</span></div>
     <div class="value">Luftfeuchtigkeit: {{weatherData.humidity | num}} %<span *ngIf="weatherData.inside_humidity"> / {{weatherData.inside_humidity | num}} %</span></div>
+    <div class="value" *ngIf="weatherData.barometer">Luftdruck: {{weatherData.barometer | num}} hPa</div>
+    <div class="value" *ngIf="weatherData.solarradiation">Sonneneinstrahlung: {{weatherData.solarradiation | num}} W/m²</div>
+    <div class="value" *ngIf="weatherData.UV">UV Index: {{weatherData.UV | num}}</div>
     <div class="value" *ngIf="weatherData.rain_today">
       Regen: {{weatherData.rain_today | num}} l
       <span *ngIf="weatherData.rain"> / {{weatherData.rain | num}} l</span>

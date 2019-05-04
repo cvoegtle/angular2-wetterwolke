@@ -9,6 +9,9 @@ export interface WeatherData {
   inside_humidity?: number;
   temperature: number;
   inside_temperature?: number;
+  barometer?: number;
+  solarradiation?: number;
+  UV?: number;
   rain?: number;
   rain_today?: number;
   raining?: boolean;
