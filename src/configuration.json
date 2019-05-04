@@ -69,7 +69,12 @@
       "cityShortcut": "DEV",
       "weatherForecast": "http://wetterstationen.meteomedia.de/?station=104300&wahl=vorhersage",
       "windRelevant": true,
-      "diagrams": []
+      "diagrams": [
+        {
+          "description": "Temperatur und Sonneneinstrahlung",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=3&oid=1393111713&format=image"
+        }
+      ]
     },
     {
       "location": "bali",
