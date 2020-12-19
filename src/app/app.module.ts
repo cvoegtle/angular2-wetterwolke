@@ -20,12 +20,16 @@ import { AppDiagramComponent } from './app-diagram/app-diagram.component';
 import { AboutComponent } from './about/about.component';
 import { NumberFormatPipe } from './number-format.pipe';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import 'hammerjs';
 import { LocalStorageService } from "./services/localstorage.service";
-import {
-  MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule, MatLineModule, MatListModule, MatSidenavModule,
-  MatTabsModule, MatToolbarModule
-} from "@angular/material";
+import { MatCardModule } from "@angular/material/card";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatLineModule } from "@angular/material/core";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatListModule } from "@angular/material/list";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatTabsModule } from "@angular/material/tabs";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   imports: [

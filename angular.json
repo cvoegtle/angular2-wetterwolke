@@ -22,7 +22,6 @@
               "src/favicon.ico",
               "src/configuration.json",
               "src/manifest.webapp",
-              "src/styles.css",
               "src/.htaccess",
               "src/images/*"
             ],
@@ -42,7 +41,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -89,7 +87,6 @@
               "src/favicon.ico",
               "src/configuration.json",
               "src/manifest.webapp",
-              "src/styles.css",
               "src/.htaccess",
               "src/images/*"
             ]
