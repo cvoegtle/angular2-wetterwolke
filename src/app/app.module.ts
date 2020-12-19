@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { WeatherDataService } from "./services/weather-data.service";
 import { WeatherDataListComponent } from "./weather-data-list";
@@ -10,7 +11,6 @@ import { WeatherDataViewComponent } from "./weather-data-view";
 import { DateFormat } from "./pipe.date-format";
 import { WeatherComponent } from './weather/weather.component';
 import { SettingsComponent } from './settings/settings.component';
-import { routing, appRoutingProviders } from "./app.routing";
 import { LocationViewComponent } from './settings/location-view.component';
 import { ConfigurationService } from "./services/configuration.service";
 import { WeatherStatsComponent } from './weather-stats/weather-stats.component';
@@ -33,7 +33,6 @@ import {
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    routing,
     MatCardModule,
     MatIconModule,
     MatListModule,
@@ -42,7 +41,8 @@ import {
     MatInputModule,
     MatLineModule,
     MatToolbarModule,
-      MatSidenavModule
+    MatSidenavModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
@@ -62,7 +62,6 @@ import {
   providers: [
     WeatherDataService,
     ConfigurationService,
-    appRoutingProviders,
     LocalStorageService
   ],
 
