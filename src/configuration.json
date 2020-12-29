@@ -186,16 +186,16 @@
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=808641441&format=image"
         },
         {
+          "description": "Wind",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1951689780&format=image"
+        },
+        {
           "description": "MD-PB-FR",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=439313787&format=image"
         },
         {
           "description": "30 Tage",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=446471860&format=image"
-        },
-        {
-          "description": "Wind",
-          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1951689780&format=image"
         }
       ]
     },
