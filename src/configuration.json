@@ -192,6 +192,10 @@
         {
           "description": "30 Tage",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=446471860&format=image"
+        },
+        {
+          "description": "Wind",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1951689780&format=image"
         }
       ]
     },
