@@ -182,12 +182,12 @@
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=2090578754&format=image"
         },
         {
-          "description": "Luftfeuchtigkeit",
-          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=808641441&format=image"
-        },
-        {
           "description": "Wind",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1951689780&format=image"
+        },
+        {
+          "description": "Luftfeuchtigkeit",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=808641441&format=image"
         },
         {
           "description": "MD-PB-FR",
