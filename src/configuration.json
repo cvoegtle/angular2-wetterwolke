@@ -263,6 +263,10 @@
         {
           "description": "7 Tage",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1380559031&format=image"
+        },
+        {
+          "description": "Stromproduktion",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=26392282&format=image"
         }
       ]
     },
