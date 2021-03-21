@@ -128,8 +128,8 @@
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=322622774&format=image"
         },
         {
-          "description": "Solarproduktion",
-          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=255192281&format=image"
+          "description": "Stromproduktion",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=26392282&format=image"
         },
         {
           "description": "Tagesproduktion",
@@ -263,10 +263,6 @@
         {
           "description": "7 Tage",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1380559031&format=image"
-        },
-        {
-          "description": "Stromproduktion",
-          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=26392282&format=image"
         }
       ]
     },
