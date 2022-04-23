@@ -260,13 +260,17 @@
     {
       "location": "instant",
       "city": "Irgendwo in Deutschland",
-      "cityShortcut": "MO",
+      "cityShortcut": "LI",
       "weatherForecast": "",
       "windRelevant": false,
       "diagrams": [
         {
           "description": "7 Tage",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1380559031&format=image"
+        },
+        {
+          "description": "Vergleich mit Zähringen",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1683337276&format=image"
         }
       ]
     },
