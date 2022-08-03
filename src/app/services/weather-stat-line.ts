@@ -3,5 +3,6 @@ export interface WeatherStatLine {
   minTemperature:number;
   maxTemperature:number;
   rain?:number;
+  solarRadiationMax?:number;
   kwh?:number;
 }

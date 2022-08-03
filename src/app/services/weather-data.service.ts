@@ -18,11 +18,13 @@ export class WeatherDataService {
 
   fetchWeatherStats(location:string):Observable<WeatherStats[]> {
     this.weatherChanged.emit(new Date());
+    console.log("fetch statistics")
     return this.http.get<WeatherStats[]>(this.getStatsUrl(location)).pipe(catchError(this.handleError));
   }
 
   fetchWeatherData(): Observable<WeatherData[]> {
     this.weatherChanged.emit(new Date());
+    console.log("fetch weatherdata")
     return this.http.get<WeatherData[]>(this.getActiveUrl()).pipe(catchError(this.handleError));
   }
 

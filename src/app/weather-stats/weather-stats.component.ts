@@ -12,6 +12,7 @@ export class WeatherStatsComponent implements OnInit {
   @Input() locationId:string;
   public stats:WeatherStatLine[];
   public kwhCaption:string;
+  public radiationCaption:string;
 
 
   constructor(private weatherService: WeatherDataService) { }
@@ -21,14 +22,21 @@ export class WeatherStatsComponent implements OnInit {
   }
 
   private processWeatherData(weatherStats:WeatherStats[]) {
-    this.stats = weatherStats[0].stats;
-    for (let i in this.stats) {
-      let stat = this.stats[i];
-      if (stat.hasOwnProperty("kwh")) {
-        this.kwhCaption = "Ertrag";
-        break;
-      }
-    }
+    this.extractStaticLines(weatherStats[0]);
+    this.extractCaptions(weatherStats[0]);
   }
 
+  private extractStaticLines(weatherStats: WeatherStats) {
+    this.stats = weatherStats.stats;
+  }
+
+  private extractCaptions(weatherStats: WeatherStats) {
+    if (weatherStats.kind == "withSolarRadiation") {
+      this.kwhCaption = "∑ Sonne";
+      this.radiationCaption = "Max Sonne";
+    } else if (weatherStats.kind == "withSolarPower") {
+      this.kwhCaption = "Ertrag";
+      this.radiationCaption = "Max L."
+    }
+  }
 }
