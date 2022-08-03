@@ -33,7 +33,7 @@ export class WeatherStatsComponent implements OnInit {
   private extractCaptions(weatherStats: WeatherStats) {
     if (weatherStats.kind == "withSolarRadiation") {
       this.kwhCaption = "∑ Sonne";
-      this.radiationCaption = "Max Sonne";
+      this.radiationCaption = "Max S.";
     } else if (weatherStats.kind == "withSolarPower") {
       this.kwhCaption = "Ertrag";
       this.radiationCaption = "Max L."
