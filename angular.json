@@ -23,7 +23,8 @@
               "src/configuration.json",
               "src/manifest.webapp",
               "src/.htaccess",
-              "src/images"
+              "src/images",
+              "src/fonts.css"
             ],
             "styles": [
               "src/styles.css"
