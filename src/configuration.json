@@ -269,6 +269,10 @@
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1380559031&format=image"
         },
         {
+          "description": "30 Tage",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1042389001&format=image"
+        },
+        {
           "description": "Vergleich mit Zähringen",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1683337276&format=image"
         }
