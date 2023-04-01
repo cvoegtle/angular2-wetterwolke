@@ -261,12 +261,16 @@
       "location": "instant",
       "city": "Freiburg Littenweiler",
       "cityShortcut": "LI",
-      "weatherForecast": "",
+      "weatherForecast": "https://wetterstationen.meteomedia.de/?station=108040&wahl=vorhersage",
       "windRelevant": false,
       "diagrams": [
         {
           "description": "7 Tage",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1380559031&format=image"
+        },
+        {
+          "description": "Wind",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1116320937&format=image"
         },
         {
           "description": "30 Tage",
