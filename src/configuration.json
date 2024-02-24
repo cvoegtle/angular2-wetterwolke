@@ -87,6 +87,10 @@
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1408859930&format=image"
         },
         {
+          "description": "Stromproduktion",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=289215059&format=image"
+        },
+        {
           "description": "Wind",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1959064763&format=image"
         },
