@@ -91,6 +91,14 @@
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=289215059&format=image"
         },
         {
+          "description": "Tagesproduktion",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1436294735&format=image"
+        },
+        {
+          "description": "Monatsproduktion",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1374758201&format=image"
+        },
+        {
           "description": "Wind",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1959064763&format=image"
         },
