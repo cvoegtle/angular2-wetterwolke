@@ -25,12 +25,12 @@
       "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=92028519&format=image"
     },
     {
-      "description": "Winter 2023/24",
-      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1676388768&format=image"
+      "description": "Winter 2024/25",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1688397000&format=image"
     },
     {
-      "description": "Winter 2022/23",
-      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1333259502&format=image"
+      "description": "Winter 2023/24",
+      "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=1&oid=1676388768&format=image"
     },
     {
       "description": "Regen",
@@ -254,6 +254,10 @@
         {
           "description": "Wind",
           "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1045869484&format=image"
+        },
+        {
+          "description": "Sonne",
+          "url": "https://wetterimages.appspot.com/weatherstation/image?sheet=2&oid=1389975220&format=image"
         },
         {
           "description": "30 Tage",
